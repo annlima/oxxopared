@@ -35,7 +35,7 @@ struct SpotView: View {
                 }
             }
             .padding(.bottom)
-            .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/)
+            .border(Color.black)
         
     }
 }
