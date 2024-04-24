@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06CAFF512BD8C9E20014679A /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CAFF502BD8C9E20014679A /* Feed.swift */; };
+		06CAFF532BD8CA2E0014679A /* SpotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CAFF522BD8CA2E0014679A /* SpotView.swift */; };
 		736EF53F2BD8A93A00724E61 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736EF5312BD8A93A00724E61 /* Badge.swift */; };
 		736EF5402BD8A93A00724E61 /* BadgeBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736EF5322BD8A93A00724E61 /* BadgeBackground.swift */; };
 		736EF5412BD8A93A00724E61 /* BadgeEarnedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736EF5332BD8A93A00724E61 /* BadgeEarnedView.swift */; };
@@ -54,6 +56,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06CAFF502BD8C9E20014679A /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
+		06CAFF522BD8CA2E0014679A /* SpotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotView.swift; sourceTree = "<group>"; };
 		736EF5312BD8A93A00724E61 /* Badge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
 		736EF5322BD8A93A00724E61 /* BadgeBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgeBackground.swift; sourceTree = "<group>"; };
 		736EF5332BD8A93A00724E61 /* BadgeEarnedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgeEarnedView.swift; sourceTree = "<group>"; };
@@ -111,6 +115,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		06CAFF4F2BD8C9890014679A /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				06CAFF502BD8C9E20014679A /* Feed.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
 		736EF5382BD8A93A00724E61 /* Badges */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				736EF54B2BD8ABAA00724E61 /* Spot.swift */,
+				06CAFF522BD8CA2E0014679A /* SpotView.swift */,
 			);
 			path = Spot;
 			sourceTree = "<group>";
@@ -175,6 +188,7 @@
 		A133441E2BD8924A00A01D18 /* oxxopared */ = {
 			isa = PBXGroup;
 			children = (
+				06CAFF4F2BD8C9890014679A /* Feed */,
 				A17A00012BD8C45300FBC66D /* AuthAndOnboarding */,
 				736EF54A2BD8AB9B00724E61 /* Spot */,
 				736EF53E2BD8A93A00724E61 /* Profile */,
@@ -359,6 +373,7 @@
 			files = (
 				A17A000F2BD8C45300FBC66D /* CustomInputField.swift in Sources */,
 				736EF5442BD8A93A00724E61 /* HexagonParameters.swift in Sources */,
+				06CAFF532BD8CA2E0014679A /* SpotView.swift in Sources */,
 				736EF5492BD8A93A00724E61 /* ProfileView.swift in Sources */,
 				736EF5482BD8A93A00724E61 /* Profile.swift in Sources */,
 				736EF54E2BD8B98C00724E61 /* Utils.swift in Sources */,
@@ -377,6 +392,7 @@
 				A17A000A2BD8C45300FBC66D /* PasswordReset.swift in Sources */,
 				A17A00102BD8C45300FBC66D /* LocationManager.swift in Sources */,
 				736EF5402BD8A93A00724E61 /* BadgeBackground.swift in Sources */,
+				06CAFF512BD8C9E20014679A /* Feed.swift in Sources */,
 				736EF5462BD8A93A00724E61 /* BadgesView.swift in Sources */,
 				736EF5422BD8A93A00724E61 /* BadgeProtocol.swift in Sources */,
 			);

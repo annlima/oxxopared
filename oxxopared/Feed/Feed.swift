@@ -23,7 +23,7 @@ struct Feed: View {
                 Text("¡Hola! Ve que hay de nuevo en tu comunidad")
                     .foregroundStyle(.white)
                     .padding(.top, -120)
-                    .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                    .font(.title)
                     .frame(width: 300, height: 300)
             }
             
