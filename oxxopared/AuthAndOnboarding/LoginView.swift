@@ -108,27 +108,40 @@ struct LoginView: View {
     }
     
     func loginUser() {
+        isLoading = true
         Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
+            isLoading = false
             if let error = error {
+                errorMessage = error.localizedDescription
+                showError = true
                 print("Error al iniciar sesión: \(error.localizedDescription)")
-            } else {
-                print("Sesión iniciada con éxito")
-                // Actualizar @AppStorage o estado aquí si es necesario
+            } else if let user = authResult?.user {
+                print("Sesión iniciada con éxito: \(user.uid)")
+                fetchUser()
             }
         }
     }
 
-    
-    func fetchUser()async throws{
-            guard let userID = Auth.auth().currentUser?.uid else{return}
-            let user = try await Firestore.firestore().collection("User").document(userID).getDocument(as: User.self)
-            await MainActor.run(body:{
-                userUID = userID
-                userNameStored = user.userNombreCompleto
-                logstatus=true
-                shouldNavigate = true
-            })
+    func fetchUser() {
+        guard let userID = Auth.auth().currentUser?.uid else {
+            print("Error: No se encontró el ID del usuario.")
+            return
         }
+        let docRef = Firestore.firestore().collection("User").document(userID)
+        docRef.getDocument { (document, error) in
+            if let document = document, document.exists {
+                let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
+                print("Datos del usuario: \(dataDescription)")
+                userUID = userID
+                userNameStored = document.data()?["nombreCompleto"] as? String ?? ""
+                logstatus = true
+                shouldNavigate = true
+            } else {
+                print("Documento no existe: \(error?.localizedDescription ?? "Unknown error")")
+            }
+        }
+    }
+
         
         func setError(_ error: Error) async {
             await MainActor.run(body:{
