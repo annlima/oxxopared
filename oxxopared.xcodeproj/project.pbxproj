@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		067161812BD8ABB200795234 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067161802BD8ABB200795234 /* Feed.swift */; };
 		736EF53F2BD8A93A00724E61 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736EF5312BD8A93A00724E61 /* Badge.swift */; };
 		736EF5402BD8A93A00724E61 /* BadgeBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736EF5322BD8A93A00724E61 /* BadgeBackground.swift */; };
 		736EF5412BD8A93A00724E61 /* BadgeEarnedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736EF5332BD8A93A00724E61 /* BadgeEarnedView.swift */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		067161802BD8ABB200795234 /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
 		736EF5312BD8A93A00724E61 /* Badge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
 		736EF5322BD8A93A00724E61 /* BadgeBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgeBackground.swift; sourceTree = "<group>"; };
 		736EF5332BD8A93A00724E61 /* BadgeEarnedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgeEarnedView.swift; sourceTree = "<group>"; };
@@ -93,6 +95,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0671617F2BD8AB3400795234 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				067161802BD8ABB200795234 /* Feed.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
 		736EF5382BD8A93A00724E61 /* Badges */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +160,7 @@
 		A133441E2BD8924A00A01D18 /* oxxopared */ = {
 			isa = PBXGroup;
 			children = (
+				0671617F2BD8AB3400795234 /* Feed */,
 				736EF53E2BD8A93A00724E61 /* Profile */,
 				A133441F2BD8924A00A01D18 /* oxxoparedApp.swift */,
 				A13344212BD8924A00A01D18 /* ContentView.swift */,
@@ -317,6 +328,7 @@
 				736EF5442BD8A93A00724E61 /* HexagonParameters.swift in Sources */,
 				736EF5492BD8A93A00724E61 /* ProfileView.swift in Sources */,
 				736EF5482BD8A93A00724E61 /* Profile.swift in Sources */,
+				067161812BD8ABB200795234 /* Feed.swift in Sources */,
 				736EF5432BD8A93A00724E61 /* BadgeSymbol.swift in Sources */,
 				736EF5472BD8A93A00724E61 /* MyPlaceView.swift in Sources */,
 				736EF5452BD8A93A00724E61 /* RotatedBadgeSymbol.swift in Sources */,
