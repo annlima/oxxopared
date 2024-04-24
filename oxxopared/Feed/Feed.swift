@@ -9,7 +9,7 @@ import SwiftUI
 
 struct Feed: View {
     @EnvironmentObject var spotStore: SpotStore
-    @State var spots: [Spot] = [Spot.spot1,Spot.spot2,Spot.spot3, Spot.spot4]
+    //@State var spots: [Spot] = [Spot.spot1,Spot.spot2,Spot.spot3, Spot.spot4]
     
     var body: some View {
         NavigationStack

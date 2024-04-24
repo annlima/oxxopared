@@ -13,7 +13,7 @@ struct ProfileView: View {
     @State var errorMessage: String = ""
     @State var showError: Bool = false
     @State var isLoading: Bool = false
-    
+    @State var navigationPath = NavigationPath()
     let profile: Profile = .fer
     @State var text: String = ""
     @State private var alertText = ""
@@ -24,6 +24,7 @@ struct ProfileView: View {
     @State private var navigateToSettings = false // To control navigation to the settings view
     @State private var navigateToLogIn = false // To control navigation to the login view
     @State private var badgeEarned = false
+    @State private var isActive = false
     
     var body: some View {
                           
@@ -124,10 +125,21 @@ struct ProfileView: View {
                             }
                             
                             Divider()
+                            HStack
+                            {
+                                Text("Mis anuncios")
+                                    .font(.system(.title2, weight: .bold))
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                Spacer()
+                                NavigationLink(destination: QrReader(navigationPath: $navigationPath), isActive: $isActive) {
+                                                    EmptyView()
+                                                }
+
+                                Button("Open QR Reader") {
+                                    isActive = true
+                                }
+                            }
                             
-                            Text("Mis anuncios")
-                                .font(.system(.title2, weight: .bold))
-                                .frame(maxWidth: .infinity, alignment: .leading)
                             
                             ForEach(0 ..< profile.spots!.count, id: \.self) { value in
                                 SpotView(spot: profile.spots![value])
