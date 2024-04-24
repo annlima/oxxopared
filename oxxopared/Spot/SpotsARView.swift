@@ -24,7 +24,7 @@ struct ARViewContainer: UIViewRepresentable {
         // Start AR session
         let session = arView.session
         let config = ARWorldTrackingConfiguration()
-        config.planeDetection = [.horizontal]
+        config.planeDetection = [.horizontal, .vertical]
         arView.session.run(config, options: [.resetTracking, .removeExistingAnchors])
         session.run(config)
         // addcoaching overlay
