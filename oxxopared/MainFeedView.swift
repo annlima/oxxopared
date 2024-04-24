@@ -17,14 +17,15 @@ struct MainFeedView: View {
                     MainTabBarContainerView(selection: $selectedTab) {
                         TabView(selection: $selectedTab) {
                             Feed()
+                                .environmentObject(SpotStore())
                                 .tag(MainTabBarItem.announcements)
                                 .mainTabBarItem(tab: .announcements, selection: $selectedTab)
                             
-                            Feed()
+                            SpotsARView()
                                 .tag(MainTabBarItem.ar)
                                 .mainTabBarItem(tab: .ar, selection: $selectedTab)
                             
-                            Feed()
+                            ProfileView()
                                 .tag(MainTabBarItem.profile)
                                 .mainTabBarItem(tab: .profile, selection: $selectedTab)
                         }
@@ -41,5 +42,6 @@ struct MainFeedView: View {
 struct MainFeedView_Previews: PreviewProvider {
     static var previews: some View {
         MainFeedView()
+            .environmentObject(SpotStore())
     }
 }
