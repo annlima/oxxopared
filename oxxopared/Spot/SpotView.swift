@@ -17,13 +17,15 @@ struct SpotView: View {
                 Text(spot.title)
                     .font(.title)
                     .fontWeight(.bold)
+                    .multilineTextAlignment(.center)
                     .frame(width: 250)
                     .padding()
-                
-                Text(spot.text)
+                    
+                buildTextView()
                     .frame(width: 250)
-                    .padding()
                 
+                
+                    
                 if let image = spot.image {
                     image
                         .resizable()
@@ -38,7 +40,43 @@ struct SpotView: View {
             .border(Color.black)
         
     }
-}
+    private func buildTextView() -> some View {
+        let words = spot.text.split(separator: " ")
+        var views: [AnyView] = []
+        var currentString = ""
+        
+        for word in words {
+            if let phoneNumber = detectPhoneNumber(String(word)) {
+                views.append(AnyView(Text(currentString)))
+                currentString = ""
+                views.append(AnyView(Link(destination: URL(string: "tel://\(phoneNumber)")!) {
+                    Text(phoneNumber)
+                        .foregroundColor(.blue)
+                       
+                        
+                }))
+            } else {
+                
+                currentString = currentString + word + " "
+            }
+        }
+        views.append(AnyView(Text(currentString)))
+        
+        return VStack {
+            ForEach(views.indices, id: \.self) { index in
+                views[index]
+                    .multilineTextAlignment(.leading)
+            }
+        }
+        .padding()
+    }
+    
+    private func detectPhoneNumber(_ text: String) -> String? {
+        let detector = try? NSDataDetector(types: NSTextCheckingResult.CheckingType.phoneNumber.rawValue)
+        let matches = detector?.matches(in: text, options: [], range: NSRange(location: 0, length: text.utf16.count))
+        return matches?.first?.phoneNumber
+    }}
+
 
 #Preview {
     SpotView(spot: Spot.spot1)
