@@ -27,6 +27,7 @@ struct SpotManager: UIViewRepresentable
             
             return textView
     }
+    
     func updateUIView(_ uiView: UITextView, context: Context) {
         uiView.text = text
     }

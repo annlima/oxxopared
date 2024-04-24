@@ -1,10 +1,9 @@
 //
-//  SpotsARView.swift
+//  ARview.swift
 //  oxxopared
 //
-//  Created by Azuany Mila Cerón on 24/04/24.
+//  Created by Azuany Mila Cerón on 23/04/24.
 //
-
 
 import SwiftUI
 import ARKit
@@ -24,7 +23,7 @@ struct ARViewContainer: UIViewRepresentable {
         // Start AR session
         let session = arView.session
         let config = ARWorldTrackingConfiguration()
-        config.planeDetection = [.horizontal, .vertical]
+        config.planeDetection = [.horizontal]
         arView.session.run(config, options: [.resetTracking, .removeExistingAnchors])
         session.run(config)
         // addcoaching overlay
@@ -35,7 +34,7 @@ struct ARViewContainer: UIViewRepresentable {
         arView.addSubview(coachingOverlay)
         
         
-        Spots.loadSceneAsync(completion: { (result) in
+        Spot1.loadSceneAsync(completion: { (result) in
                     do {
                         let spot1 = try result.get()
                         arView.scene.anchors.append(spot1)
@@ -45,7 +44,7 @@ struct ARViewContainer: UIViewRepresentable {
                     
                 })
         
-        Spots.loadSceneAsync() { result in
+        Spot1.loadSceneAsync() { result in
             switch result {
             case .success(let anchor):
                 // Add the loaded scene to the ARView
@@ -63,12 +62,12 @@ struct ARViewContainer: UIViewRepresentable {
     
 }
 
-struct SpotsARView: View {
+struct ARview: View {
     var body: some View {
         ARViewContainer()
     }
 }
 
 #Preview {
-    SpotsARView()
+    ARview()
 }

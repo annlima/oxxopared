@@ -6,17 +6,16 @@
           "__content" : [
             {
               "arAnchorSpecification" : {
-                "name" : "image",
-                "physicalWidth" : 0.11620689928531647,
-                "url" : "image:19fe0a2db91208db96f77856fbcf982b\/577f75aa-f27a-48a3-a378-e32a3a136f35.jpeg"
+                "alignment" : "vertical",
+                "name" : "surface"
               },
               "behaviors" : [
 
               ],
               "gravity" : [
                 0,
-                -9.8,
-                0
+                0,
+                9.8
               ],
               "identifier" : "686FE89D-2F06-48B2-82CA-E7C41DAC4C5E",
               "material" : "concrete",
@@ -524,7 +523,7 @@
                           "rigidBody-enabled",
                           {
                             "typeName" : "Bool",
-                            "value" : false
+                            "value" : true
                           }
                         ],
                         [
@@ -794,6 +793,13 @@
                             "typeName" : "UUID",
                             "value" : "AFB6C2F8-185C-4831-84EA-1B2CA68BA24F"
                           }
+                        ],
+                        [
+                          "rigidBody-enabled",
+                          {
+                            "typeName" : "Bool",
+                            "value" : true
+                          }
                         ]
                       ]
                     },
@@ -932,6 +938,22 @@
                           }
                         ]
                       ],
+                      "children" : {
+                        "back_1" : {
+                          "overrides" : {
+                            "factory" : null,
+                            "runtimeAttributes" : [
+                              [
+                                "RuntimeIdentifier",
+                                {
+                                  "typeName" : "UUID",
+                                  "value" : "2BB13701-AF9B-40BB-B7A7-701E98B36BAA"
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      },
                       "factory" : {
                         "identifier" : "com.apple.rc.af.CoreAssetFactories.Text",
                         "version" : "0.0"
@@ -942,6 +964,13 @@
                           {
                             "typeName" : "UUID",
                             "value" : "E9DBD37F-B765-4C3F-8D13-65B48B5BA044"
+                          }
+                        ],
+                        [
+                          "rigidBody-enabled",
+                          {
+                            "typeName" : "Bool",
+                            "value" : true
                           }
                         ]
                       ]
@@ -1218,7 +1247,7 @@
                           "rigidBody-enabled",
                           {
                             "typeName" : "Bool",
-                            "value" : false
+                            "value" : true
                           }
                         ],
                         [
@@ -1451,16 +1480,16 @@
                   -0.01674,
                   0,
                   -0.0167298,
-                  0.03489982,
+                  0.03489988,
                   -0.9992508,
                   0,
-                  0.00058419706,
+                  0.00058419805,
                   0.99939084,
-                  0.03489463,
+                  0.03489469,
                   0,
-                  0.119329445,
-                  0.65172887,
-                  -0.03057431,
+                  0.2953876,
+                  1.6960241,
+                  -0.2725213,
                   1
                 ],
                 "sceneTransform" : [
