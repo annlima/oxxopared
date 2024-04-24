@@ -9,10 +9,10 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        LoginView()
+        QrReader()
     }
 }
 
 #Preview {
-    ContentView()
+    QrReader()
 }
