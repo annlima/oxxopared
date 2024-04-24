@@ -20,24 +20,22 @@ struct Onboarding: View {
         else
         {
             ZStack {
-                LinearGradient(gradient: Gradient(colors: [Color("ColorPrincipal").opacity(0.7), Color("ColorPrincipal").opacity(0.9), Color("ColorPrincipal")]), startPoint: .topLeading, endPoint: .bottomTrailing)
+                LinearGradient(gradient: Gradient(colors: [Color("RedMain").opacity(0.7), Color("RedMain").opacity(0.9), Color("RedMain")]), startPoint: .topLeading, endPoint: .bottomTrailing)
                     .edgesIgnoringSafeArea(.all)
                 
                 TabView(selection: $selectedIndex) {
                     WelcomeTab().tag(0)
-                    ChallengesTab().tag(1)
-                    ShareTab().tag(2)
-                    ProfilePhotoTab(selectedIndex: $selectedIndex).tag(3)
-                    NotificationsTab(selectedIndex: $selectedIndex).tag(4)
-                    LocationPermissionTab().tag(5)
-                    GoTab(onboardingCompleted: $onboardingCompleted).tag(6)
+                    ProfilePhotoTab(selectedIndex: $selectedIndex).tag(1)
+                    NotificationsTab(selectedIndex: $selectedIndex).tag(2)
+                    LocationPermissionTab().tag(3)
+                    GoTab(onboardingCompleted: $onboardingCompleted).tag(4)
                 }
                 .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
                 
                 VStack {
                     Spacer()
                     HStack(spacing: 8) {
-                        ForEach(0..<7) { index in
+                        ForEach(0..<5) { index in
                             Rectangle()
                                 .frame(width: selectedIndex == index ? 20 : 8, height: 8)
                                 .foregroundColor(selectedIndex == index ? Color.white : Color.gray)
@@ -79,20 +77,20 @@ struct LocationPermissionTab: View {
                 .padding(.top, 20)
                 .padding(.bottom, 1)
                 .multilineTextAlignment(.center)
-            Text("Necesitamos acceso a tu ubicación para que puedas denunciar en el lugar que te encuentras.")
+            Text("Necesitamos acceso a tu ubicación para que puedas encontrar tu Oxxo más cercano.")
                 .font(.system(size: 20))
                 .foregroundColor(.white)
                 .bold()
                 .multilineTextAlignment(.center)
                 .padding([.trailing, .leading, .bottom], 50)
             Spacer()
-            Button("Permitir ubicación") {
+            Button("Activar ubicación") {
                 locationManager.requestLocationAuthorization()
             }
             .frame(width: 320, height: 50)
             .font(.system(size: 20, weight: .bold))
             .background(Color.white)
-            .foregroundColor(Color("ColorPrincipal"))
+            .foregroundColor(Color("RedMain"))
             .cornerRadius(10)
             .padding(.bottom, 50)
         }
@@ -102,19 +100,19 @@ struct LocationPermissionTab: View {
 struct WelcomeTab: View {
     var body: some View {
         VStack {
-            Image("Logo")
+            Image("oxxo")
                 .resizable()
                   .aspectRatio(contentMode: .fit)
-                  .frame(width: 350, height: 350)
-                  .shadow(color: .black, radius: 5, x: 0, y: 2)
-            Text("Bienvenido a Ecommunity")
-                .font(.system(size: 48, weight: .bold)) // Hacer el título un poco más grande
+                  .frame(width: 300, height: 378)
+                  .shadow(color: .black, radius: 30, x: 0, y: 2)
+            Text("Bienvenido")
+                .font(.system(size: 43, weight: .bold)) // Hacer el título un poco más grande
                 .foregroundColor(.white) // Color del texto
                 .padding(.horizontal, 10)
-                .padding(.top, 20) // Espacio reducido arriba del título
+                .padding(.top, -10) // Espacio reducido arriba del título
                 .padding(.bottom, 1)
                 .multilineTextAlignment(.center)
-            Text("El lugar donde tú puedes hacer el cambio por tu comunidad.")
+            Text("Anuncios a tu alcance, ahorros en tu bolsillo.")
                 .font(.system(size: 20))
                 .foregroundColor(.white) // Color del texto
                 .bold()
@@ -122,20 +120,6 @@ struct WelcomeTab: View {
                 .padding([.trailing, .leading, .bottom], 50)
             
         }
-    }
-}
-
-// MARK: - ChallengesTab
-struct ChallengesTab: View {
-    var body: some View {
-        tabViewTemplate(imageName: "eye.trianglebadge.exclamationmark", title: "Denuncias", description: "¿Has notado algo que podría afectar al ambiente? Toma una foto, describe el problema y nosotros nos encargamos.")
-    }
-}
-
-// MARK: - ShareTab
-struct ShareTab: View {
-    var body: some View {
-        tabViewTemplate(imageName: "person.3.fill", title: "Elige un líder", description: "Sé o vota por una persona que llevará todos los casos relevantes al Ayuntamiento.")
     }
 }
 
@@ -161,7 +145,7 @@ struct GoTab: View {
                             .frame(width: 320, height: 75)
                             .font(.system(size: 25, weight: .bold))
                             .background(Color.white)
-                            .foregroundColor(Color("ColorPrincipal"))
+                            .foregroundColor(Color("RedMain"))
                             .cornerRadius(10)
                             .padding(.top, 50)
                         Spacer()
@@ -193,7 +177,7 @@ struct NotificationsTab: View {
                 .padding(.top, 20)
                 .padding(.bottom, 1)
                 .multilineTextAlignment(.center)
-            Text("Mantente al día con las últimas noticias y actualizaciones activando las notificaciones.")
+            Text("Mantente al día con los últimos productos y ofertas activando las notificaciones.")
                 .font(.system(size: 20))
                 .foregroundColor(.white)
                 .bold()
@@ -206,7 +190,7 @@ struct NotificationsTab: View {
             .frame(width: 320, height: 50)
             .font(.system(size: 20, weight: .bold))
             .background(Color.white)
-            .foregroundColor(Color("ColorPrincipal"))
+            .foregroundColor(Color("RedMain"))
             .cornerRadius(10)
             .padding(.bottom, 50)
             .alert(isPresented: $showingAlert) {
@@ -265,7 +249,7 @@ struct ProfilePhotoTab: View {
             .frame(width: 320, height: 50)
             .font(.system(size: 20, weight: .bold))
             .background(Color.white)
-            .foregroundColor(Color("ColorPrincipal"))
+            .foregroundColor(Color("RedMain"))
             .cornerRadius(10)
             .padding(.bottom, 50)
             .sheet(isPresented: $showingImagePicker, onDismiss: loadImage) {
@@ -277,7 +261,7 @@ struct ProfilePhotoTab: View {
     func loadImage() {
         guard let inputImage = inputImage else { return }
         DispatchQueue.main.async {
-            selectedIndex = (selectedIndex + 1) % 6
+            selectedIndex = (selectedIndex + 1) % 4
         }
     }
 }
