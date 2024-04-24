@@ -8,14 +8,24 @@
 import SwiftUI
 import FirebaseAuth
 import Firebase
+import FirebaseFirestore
+import FirebaseStorage
 
 struct LoginView: View {
     @State private var email = ""
     @State private var password = ""
     @State private var errorMessage = "Error al iniciar sesión"
     @State private var shouldNavigate = false
+    @State var isLoading: Bool = false
+    @State var showError: Bool = false
+    
+    @AppStorage ("log_status") var logstatus: Bool = false
+    @AppStorage ("user_name") var userNameStored: String = ""
+    @AppStorage ("user_UID") var userUID: String = ""
+    @AppStorage("user_profile_url") var profileURL: URL?
+    
     var body: some View {
-        NavigationView{
+        NavigationStack{
             VStack {
                 AuthHeaderView(title1: "Hola,", title2: "bienvenido de nuevo.")
                 
@@ -49,7 +59,7 @@ struct LoginView: View {
                 NavigationLink(destination: MainFeedView(), isActive: $shouldNavigate) { EmptyView() }
                 Button {
                     print("Inicia sesión")
-                    login()
+                    loginUser()
                 } label: {
                     Text("Inicia sesión")
                         .font(.headline)
@@ -87,26 +97,57 @@ struct LoginView: View {
                     })
                     .hidden()
             }
+            .overlay(content: {
+                capaCarga(show:$isLoading)
+            })
+            .alert(errorMessage, isPresented: $showError, actions:{})
             .navigationBarBackButtonHidden(true)
             .ignoresSafeArea()
         }
         .navigationBarBackButtonHidden(true)
     }
     
-    func login() {
-        Auth.auth().signIn(withEmail: self.email, password: self.password) { authResult, error in
-            if let error = error {
-                self.errorMessage = error.localizedDescription
-                return
-            }else if let authResult = authResult {
-                // User registered successfully
-                let user = authResult.user
-                print("User \(user.uid) registered successfully")
-                self.shouldNavigate = true
-                // You can perform any necessary actions here, such as navigating to the next screen
+    func loginUser(){
+            isLoading=true
+            closeKeyboard()
+            Task{
+                do{
+                    try await Auth.auth().signIn(withEmail:email, password: password)
+                    print("User Found")
+                    try await fetchUser()
+                }catch{
+                    await setError(error)
+                }
             }
         }
-    }
+    
+    func fetchUser()async throws{
+            guard let userID = Auth.auth().currentUser?.uid else{return}
+            let user = try await Firestore.firestore().collection("User").document(userID).getDocument(as: User.self)
+            await MainActor.run(body:{
+                userUID = userID
+                userNameStored = user.userNombreCompleto
+                logstatus=true
+                shouldNavigate = true
+            })
+        }
+        func resetPassword(){
+            Task{
+                do{
+                    try await Auth.auth().sendPasswordReset(withEmail: email)
+                    print("Link Sent")
+                }catch{
+                    await setError(error)
+                }
+            }
+        }
+        func setError(_ error: Error) async {
+            await MainActor.run(body:{
+                errorMessage = error.localizedDescription
+                showError.toggle()
+                isLoading=false
+            })
+        }
 }
 
 struct LoginView_Previews: PreviewProvider {

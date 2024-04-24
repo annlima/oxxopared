@@ -188,7 +188,6 @@ struct ProfileView: View {
             try? Auth.auth().signOut()
             userUID = ""
             nombreCompleto = ""
-            profileURL = nil
             logstatus = false
         }
         

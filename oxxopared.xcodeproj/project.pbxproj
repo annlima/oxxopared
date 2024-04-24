@@ -11,7 +11,6 @@
 		06CAFF532BD8CA2E0014679A /* SpotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CAFF522BD8CA2E0014679A /* SpotView.swift */; };
 		06CAFF552BD8CC690014679A /* SpotManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CAFF542BD8CC690014679A /* SpotManager.swift */; };
 		06CAFF572BD8FE300014679A /* IllegalRelated.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 06CAFF562BD8FE300014679A /* IllegalRelated.mlmodel */; };
-		06E0A72C2BD96EF300BCCF5C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 06E0A72B2BD96EF300BCCF5C /* GoogleService-Info.plist */; };
 		736EF53F2BD8A93A00724E61 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736EF5312BD8A93A00724E61 /* Badge.swift */; };
 		736EF5402BD8A93A00724E61 /* BadgeBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736EF5322BD8A93A00724E61 /* BadgeBackground.swift */; };
 		736EF5412BD8A93A00724E61 /* BadgeEarnedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736EF5332BD8A93A00724E61 /* BadgeEarnedView.swift */; };
@@ -26,6 +25,8 @@
 		736EF54E2BD8B98C00724E61 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736EF54D2BD8B98C00724E61 /* Utils.swift */; };
 		73F339822BD9680B0097281E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 73F339812BD9680B0097281E /* GoogleService-Info.plist */; };
 		73F339862BD977B00097281E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F339852BD977B00097281E /* User.swift */; };
+		73F3398B2BD982FB0097281E /* ExtensionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F3398A2BD982FB0097281E /* ExtensionView.swift */; };
+		73F3398F2BD984BD0097281E /* capaCarga.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F3398E2BD984BD0097281E /* capaCarga.swift */; };
 		9B88833B2BD8E476002C89E2 /* MainTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B88833A2BD8E476002C89E2 /* MainTabBarItem.swift */; };
 		9B88833D2BD8E4EB002C89E2 /* MainTabBarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B88833C2BD8E4EB002C89E2 /* MainTabBarContainerView.swift */; };
 		9B88833F2BD8E50C002C89E2 /* MainTabBarItemsPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B88833E2BD8E50C002C89E2 /* MainTabBarItemsPreferenceKey.swift */; };
@@ -97,6 +98,8 @@
 		73F339812BD9680B0097281E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		73F339832BD969D50097281E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		73F339852BD977B00097281E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		73F3398A2BD982FB0097281E /* ExtensionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionView.swift; sourceTree = "<group>"; };
+		73F3398E2BD984BD0097281E /* capaCarga.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = capaCarga.swift; sourceTree = "<group>"; };
 		9B88833A2BD8E476002C89E2 /* MainTabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarItem.swift; sourceTree = "<group>"; };
 		9B88833C2BD8E4EB002C89E2 /* MainTabBarContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarContainerView.swift; sourceTree = "<group>"; };
 		9B88833E2BD8E50C002C89E2 /* MainTabBarItemsPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarItemsPreferenceKey.swift; sourceTree = "<group>"; };
@@ -219,6 +222,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		73F339892BD97E420097281E /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				73F339812BD9680B0097281E /* GoogleService-Info.plist */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		A13344132BD8924A00A01D18 = {
 			isa = PBXGroup;
 			children = (
@@ -227,6 +238,7 @@
 				A133442F2BD8924C00A01D18 /* oxxoparedTests */,
 				A13344392BD8924C00A01D18 /* oxxoparedUITests */,
 				A133441D2BD8924A00A01D18 /* Products */,
+				73F339892BD97E420097281E /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -262,6 +274,7 @@
 				9B88833C2BD8E4EB002C89E2 /* MainTabBarContainerView.swift */,
 				9B88833E2BD8E50C002C89E2 /* MainTabBarItemsPreferenceKey.swift */,
 				9B8883402BD8E555002C89E2 /* MainFeedView.swift */,
+				73F3398A2BD982FB0097281E /* ExtensionView.swift */,
 			);
 			path = oxxopared;
 			sourceTree = "<group>";
@@ -298,6 +311,7 @@
 				A17A00032BD8C45300FBC66D /* RegistrationView.swift */,
 				A17A00042BD8C45300FBC66D /* AuthHeaderView.swift */,
 				A17A00052BD8C45300FBC66D /* LoginView.swift */,
+				73F3398E2BD984BD0097281E /* capaCarga.swift */,
 				A17A00062BD8C45300FBC66D /* Onboarding.swift */,
 				A17A00072BD8C45300FBC66D /* CustomInputField.swift */,
 				A17A00082BD8C45300FBC66D /* LocationManager.swift */,
@@ -458,10 +472,12 @@
 				736EF5482BD8A93A00724E61 /* Profile.swift in Sources */,
 				06CAFF552BD8CC690014679A /* SpotManager.swift in Sources */,
 				736EF54E2BD8B98C00724E61 /* Utils.swift in Sources */,
+				73F3398F2BD984BD0097281E /* capaCarga.swift in Sources */,
 				736EF5432BD8A93A00724E61 /* BadgeSymbol.swift in Sources */,
 				9B8883412BD8E555002C89E2 /* MainFeedView.swift in Sources */,
 				736EF54C2BD8ABAA00724E61 /* Spot.swift in Sources */,
 				A17A000E2BD8C45300FBC66D /* Onboarding.swift in Sources */,
+				73F3398B2BD982FB0097281E /* ExtensionView.swift in Sources */,
 				736EF5452BD8A93A00724E61 /* RotatedBadgeSymbol.swift in Sources */,
 				A17A000B2BD8C45300FBC66D /* RegistrationView.swift in Sources */,
 				A13344222BD8924A00A01D18 /* ContentView.swift in Sources */,
@@ -663,7 +679,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Andy.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Andy.x1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -679,7 +695,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"oxxopared/Preview Content\"";
-				DEVELOPMENT_TEAM = XX3STCX8J3;
+				DEVELOPMENT_TEAM = SAM2A296M4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = oxxopared/Info.plist;
@@ -694,7 +710,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Andy.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Andy.x1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
