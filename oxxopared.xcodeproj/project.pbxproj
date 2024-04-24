@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0653BD112BD9A17D00A37A3D /* QrReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0653BD102BD9A17D00A37A3D /* QrReader.swift */; };
+		0653BD132BD9A19C00A37A3D /* QRScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0653BD122BD9A19C00A37A3D /* QRScanner.swift */; };
 		06CAFF512BD8C9E20014679A /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CAFF502BD8C9E20014679A /* Feed.swift */; };
 		06CAFF532BD8CA2E0014679A /* SpotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CAFF522BD8CA2E0014679A /* SpotView.swift */; };
 		06CAFF552BD8CC690014679A /* SpotManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CAFF542BD8CC690014679A /* SpotManager.swift */; };
@@ -79,6 +81,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0653BD102BD9A17D00A37A3D /* QrReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrReader.swift; sourceTree = "<group>"; };
+		0653BD122BD9A19C00A37A3D /* QRScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScanner.swift; sourceTree = "<group>"; };
 		06CAFF502BD8C9E20014679A /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
 		06CAFF522BD8CA2E0014679A /* SpotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotView.swift; sourceTree = "<group>"; };
 		06CAFF542BD8CC690014679A /* SpotManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotManager.swift; sourceTree = "<group>"; };
@@ -163,6 +167,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0653BD0F2BD9A16C00A37A3D /* Qr */ = {
+			isa = PBXGroup;
+			children = (
+				0653BD102BD9A17D00A37A3D /* QrReader.swift */,
+				0653BD122BD9A19C00A37A3D /* QRScanner.swift */,
+			);
+			path = Qr;
+			sourceTree = "<group>";
+		};
 		06CAFF4F2BD8C9890014679A /* Feed */ = {
 			isa = PBXGroup;
 			children = (
@@ -258,6 +271,7 @@
 		A133441E2BD8924A00A01D18 /* oxxopared */ = {
 			isa = PBXGroup;
 			children = (
+				0653BD0F2BD9A16C00A37A3D /* Qr */,
 				73F339842BD977A70097281E /* Model */,
 				73F339832BD969D50097281E /* Info.plist */,
 				06CAFF562BD8FE300014679A /* IllegalRelated.mlmodel */,
@@ -497,7 +511,9 @@
 				A17A00102BD8C45300FBC66D /* LocationManager.swift in Sources */,
 				736EF5402BD8A93A00724E61 /* BadgeBackground.swift in Sources */,
 				9B88833B2BD8E476002C89E2 /* MainTabBarItem.swift in Sources */,
+				0653BD112BD9A17D00A37A3D /* QrReader.swift in Sources */,
 				9B88834B2BD97898002C89E2 /* SpotStore.swift in Sources */,
+				0653BD132BD9A19C00A37A3D /* QRScanner.swift in Sources */,
 				A11CA7552BD95DA500A5AFD1 /* NewPostView.swift in Sources */,
 				06CAFF572BD8FE300014679A /* IllegalRelated.mlmodel in Sources */,
 				9B8883472BD91156002C89E2 /* Spots.rcproject in Sources */,
