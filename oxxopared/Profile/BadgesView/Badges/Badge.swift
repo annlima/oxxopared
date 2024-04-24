@@ -63,7 +63,7 @@ func getTypeBadge(type: Int) -> String{
         return "El periodista"
     
     case 2:
-        return "30 denuncias"
+        return "30  contribuciones"
     
     case 3:
         return "20 denuncias"

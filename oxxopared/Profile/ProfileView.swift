@@ -34,9 +34,9 @@ struct ProfileView: View {
                                 .frame(width: 150, height: 150)
                                 .clipShape(.circle)
                                 .overlay(
-                                        Circle()
-                                            .stroke(.white, lineWidth: 4)
-                                    )
+                                    Circle()
+                                        .stroke(.white, lineWidth: 4)
+                                )
                                 .padding(4)
                                 .background {
                                     Circle()
@@ -45,7 +45,7 @@ struct ProfileView: View {
                                         .frame(width: 150, height: 150)
                                         .shadow(radius: 20) // Adds a shadow for depth
                                 }
-                                
+                            
                                 .padding(.top, 70)
                             
                             Text(profile.name)
@@ -108,20 +108,15 @@ struct ProfileView: View {
                                 .font(.system(.title2, weight: .bold))
                                 .frame(maxWidth: .infinity, alignment: .leading)
                             
-                            /*/ForEach(profile.spots ?? [Spot.none]) { spot in
-                                
-                                VStack {
-                                    //ComplaintsLeaderView(spot: spot)
-                                    
-                                    Divider()
-                                }
-                                
-                            }*/
-                            
+                            ForEach(0 ..< profile.spots!.count, id: \.self) { value in
+                                SpotView(spot: profile.spots![value])
+                                    .padding()
+                            }
+                            .padding()
                         }
                         .padding()
-                        
                         Spacer()
+                            
                     }
                     
                     Menu {
@@ -154,14 +149,14 @@ struct ProfileView: View {
                     .padding(.trailing, 15)
                     
                 }
-                //.padding()
+                
             }
             .ignoresSafeArea()
             .navigationDestination(isPresented: $navigateToSettings) {
-                //SettingsView()
+                SettingsView()
             }
             .navigationDestination(isPresented: $navigateToLogIn) {
-                //LoginView()
+                LoginView()
             }
             
         }

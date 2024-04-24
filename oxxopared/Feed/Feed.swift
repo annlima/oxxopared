@@ -20,6 +20,8 @@ struct Feed: View {
  
                     .padding(.top, -300) // Posiciona la elipse hacia arriba para que solo se vea la mitad
                     .padding(.horizontal, 50)
+                
+                
                 Text("¡Hola! Ve que hay de nuevo en tu comunidad")
                     .foregroundStyle(.white)
                     .padding(.top, -120)

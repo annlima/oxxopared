@@ -9,10 +9,10 @@ import Foundation
 import SwiftUI
 
 struct Spot {
-    let title: String
-    let image: Image?
-    let text: String
-    let category: String // oportunidades, servicios, artículos de segunda mano, cosas perdidas
+    var title: String
+    var image: Image?
+    var text: String
+    var category: String // oportunidades, servicios, artículos de segunda mano, cosas perdidas, medio ambiente
 }
 
 extension Spot {
