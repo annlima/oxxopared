@@ -23,7 +23,7 @@ struct NewPostView: View {
 
     @EnvironmentObject var spotStore: SpotStore // EnvironmentObject for the spots
 
-    
+    @Binding var navigationPath: NavigationPath
     @State private var image: Data?
     @State private var item: PhotosPickerItem?
     @State var titleText: String = ""
@@ -120,6 +120,12 @@ struct NewPostView: View {
                             .accentColor(.redMain)
                         }
                     }
+                    
+                    NavigationLink(
+                        destination: PromosView(navigationPath: $navigationPath),
+                                    isActive: $navigationActive,
+                                    label: { EmptyView() }
+                                )
 
                     Button("Publicar") {
                         if let uiImage = selectedImage {
@@ -131,38 +137,35 @@ struct NewPostView: View {
 
                                     let prediction = try model.prediction(image: pixelBuffer)
                                     // Usa el resultado de la predicción según sea necesario
-                            
+                                    if prediction.target == "Legal"
+                                    {
+                                        let newImage: Image?
+                                        if let selectedImage = selectedImage {
+                                            newImage = Image(uiImage: selectedImage)
+                                        } else {
+                                            newImage = nil  // Keep newImage as nil if there's no selected image
+                                        }
+                                        navigationActive = spotStore.addSpot(title: titleText, image: newImage, text: caption, category: selectedCategory)
+                                    }
+                                    else
+                                    {
+                                        print("not legal")
+                                    }
                                 } catch {
                                     print("Error al hacer la predicción: \(error)")
                                 }
                             } else {
                                 print("Error: No se pudo convertir la imagen a pixelBuffer")
                             }
-                            
-                            
-                            let newImage: Image?
-                                if let selectedImage = selectedImage {
-                                    newImage = Image(uiImage: selectedImage)
-                                } else {
-                                    newImage = nil  // Keep newImage as nil if there's no selected image
-                                }
-                            
-                            spotStore.addSpot(title: titleText, image: newImage, text: caption, category: selectedCategory) { success in
-                                    if success {
-                                            DispatchQueue.main.async {
-                                                NavigationLink("", destination: MainFeedView(), isActive: $navigationActive)
-                                                dismiss() // Dismiss the current view
-                                                // Navigate to MainFeedView
-                                            }
-                                        } else {
-                                            print("Failed to add the spot.")
-                                        }
-                                    }
                            
                         } else {
                             // Provide user feedback about the error
                             print("Error: No image selected")
                         }
+                        
+                        
+                        
+                        
                     }
                     .padding(.vertical, 12)
                     .padding(.horizontal, 30)
@@ -170,6 +173,7 @@ struct NewPostView: View {
                     .foregroundColor(.white)
                     .background(Color.redMain)
                     .cornerRadius(10)
+                    
 
                 }
             }
@@ -265,7 +269,9 @@ struct NewPostView_Previews: PreviewProvider {
     @State static var posts: [PostData] = []
 
     static var previews: some View {
-        NewPostView()
+        @State var navigationPath = NavigationPath()
+        NewPostView(navigationPath: $navigationPath)
+        
             .environmentObject(SpotStore())
     }
 }

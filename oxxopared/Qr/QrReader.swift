@@ -10,8 +10,9 @@ import Combine
 
 struct QrReader: View {
     @State var scanResult = "No QR code detected"
-    @State var showNewPostView = false
+    @State var showNewPostView = true
     @State var detected = false
+    @Binding var navigationPath: NavigationPath
     var body: some View {
         VStack
         {
@@ -34,7 +35,7 @@ struct QrReader: View {
             QRScanner(result: $scanResult)
 
             NavigationLink(
-                            destination: NewPostView(),
+                            destination: NewPostView(navigationPath: $navigationPath),
                             isActive: $showNewPostView,
                             label: { EmptyView() }
                         )
@@ -56,6 +57,7 @@ struct QrReader: View {
     
 }
 
-#Preview {
-    QrReader()
-}
+/*#Preview {
+    @State var navigationPath = NavigationPath()
+    QrReader(navigationPath: NavigationPath())
+}*/
