@@ -19,7 +19,7 @@ struct iOSCheckboxToggleStyle: View {
 
 struct RegistrationView: View {
     @State private var email = ""
-    @State private var username = ""
+    @State private var phonenumber = ""
     @State private var fullname = ""
     @State private var age = ""
     @State private var password = ""
@@ -31,21 +31,21 @@ struct RegistrationView: View {
             VStack {
                 AuthHeaderView(title1: "Empecemos,", title2: "crea tu cuenta.")
                 VStack(spacing: 20) {
-                    CustomInputField(imageName: "envelope",
-                                     placeholderText: "Correo electrónico",
-                                     isSecureField: false,
-                                     text: $email)
-                    CustomInputField(imageName: "person",
-                                     placeholderText: "Nombre de usuario",
-                                     isSecureField: false,
-                                     text: $username)
                     CustomInputField(imageName: "person",
                                      placeholderText: "Nombre completo",
                                      isSecureField: false,
                                      text: $fullname)
+                    CustomInputField(imageName: "envelope",
+                                     placeholderText: "Correo electrónico",
+                                     isSecureField: false,
+                                     text: $email)
+                    CustomInputField(imageName: "phone",
+                                     placeholderText: "Número de teléfono",
+                                     isSecureField: false,
+                                     text: $phonenumber)
                     CustomInputField(imageName: "number",
                                      placeholderText: "Edad",
-                                     isSecureField: false, // Opcional, ya que es el valor predeterminado
+                                     isSecureField: false, 
                                      text: $age)
                     
                     CustomInputField(imageName: "lock",
@@ -58,7 +58,7 @@ struct RegistrationView: View {
                             Text("Estoy de acuerdo con los términos y condiciones")
                                 .font(.system(size: 12))
                                 .fontWeight(.semibold)
-                                .foregroundColor(Color("ColorPrincipal"))
+                                .foregroundColor(Color("RedMain") .opacity(0.9))
                         }
                     }
                 }
@@ -72,7 +72,7 @@ struct RegistrationView: View {
                         .font(.headline)
                         .foregroundColor(.white)
                         .frame(width: 340, height: 50)
-                        .background(Color("ColorPrincipal"))
+                        .background(Color("RedMain") .opacity(0.9))
                         .clipShape(Capsule())
                         .padding()
                 }
@@ -86,7 +86,7 @@ struct RegistrationView: View {
                             Text("¿Ya tienes cuenta? Inicia sesión")
                                 .font(.system(size: 15))
                                 .fontWeight(.semibold)
-                                .foregroundColor(Color("ColorPrincipal"))
+                                .foregroundColor(Color("RedMain") .opacity(0.9))
                         }
                     }
                 }
