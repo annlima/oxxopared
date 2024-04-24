@@ -109,6 +109,7 @@ struct BadgeEarnedView: View {
                     } label: {
                         Text("Compartir")
                     }
+                    /*
                     .buttonStyle(CustomeButtonStyle())
                     .shadow(color: .gray, radius: 5, x: 0, y: 2)
                     .foregroundColor(Color("ColorPrincipal"))
@@ -121,6 +122,7 @@ struct BadgeEarnedView: View {
                     }
                     .buttonStyle(.plain)
                     .padding(.vertical, 20)
+                     */
                 }
             }
 
