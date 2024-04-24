@@ -44,11 +44,35 @@ func getBadge(type: Int, width: CGFloat) -> Badge {
             width: width
         )
         
-    case 1: 
+    case 1:
         return Badge(
             gradientStart: Color(red: 255.0 / 255.0, green: 170 / 255.0, blue: 66 / 255.0),
             gradientEnd: Color.orange,
-            symbolColor: .red,
+            symbolColor: .white,
+            width: width
+        )
+    
+    case 11:
+        return Badge(
+            gradientStart: Color(red: 255.0 / 255.0, green: 170 / 255.0, blue: 66 / 255.0),
+            gradientEnd: Color.orange,
+            symbolColor: Color(red: 255 / 255.0, green: 87 / 255.0, blue: 51 / 255.0),
+            width: width
+        )
+        
+    case 21:
+        return Badge(
+            gradientStart: Color(red: 255.0 / 255.0, green: 170 / 255.0, blue: 66 / 255.0),
+            gradientEnd: Color.orange,
+            symbolColor: Color(red: 212 / 255.0, green: 175 / 255.0, blue: 55 / 255.0),
+            width: width
+        )
+        
+    case 31:
+        return Badge(
+            gradientStart: Color(red: 255.0 / 255.0, green: 170 / 255.0, blue: 66 / 255.0),
+            gradientEnd: Color.orange,
+            symbolColor: .black,
             width: width
         )
         
@@ -68,7 +92,7 @@ func getBadge(type: Int, width: CGFloat) -> Badge {
             width: width
         )
     
-    case 4:
+    case 41:
         return Badge(width: width)
 
     default: 
