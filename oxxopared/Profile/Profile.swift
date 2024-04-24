@@ -27,7 +27,7 @@ extension Profile {
             spots: [
                 Spot.spot1
             ],
-            badges: [0,10,20,30]
+            badges: [0,10,20,30,1,11,21,31]
         )
     }
 }
