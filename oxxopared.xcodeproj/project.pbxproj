@@ -36,6 +36,7 @@
 		A17A000F2BD8C45300FBC66D /* CustomInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17A00072BD8C45300FBC66D /* CustomInputField.swift */; };
 		A17A00102BD8C45300FBC66D /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17A00082BD8C45300FBC66D /* LocationManager.swift */; };
 		A17A00112BD8C45300FBC66D /* TermsAndConditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17A00092BD8C45300FBC66D /* TermsAndConditions.swift */; };
+		A1FF58C12BD8D0FC00411D8D /* NewPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FF58C02BD8D0FC00411D8D /* NewPostView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 		A17A00072BD8C45300FBC66D /* CustomInputField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomInputField.swift; sourceTree = "<group>"; };
 		A17A00082BD8C45300FBC66D /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		A17A00092BD8C45300FBC66D /* TermsAndConditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsAndConditions.swift; sourceTree = "<group>"; };
+		A1FF58C02BD8D0FC00411D8D /* NewPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,6 +239,7 @@
 				A17A00072BD8C45300FBC66D /* CustomInputField.swift */,
 				A17A00082BD8C45300FBC66D /* LocationManager.swift */,
 				A17A00092BD8C45300FBC66D /* TermsAndConditions.swift */,
+				A1FF58C02BD8D0FC00411D8D /* NewPostView.swift */,
 			);
 			path = AuthAndOnboarding;
 			sourceTree = "<group>";
@@ -390,6 +393,7 @@
 				A17A000D2BD8C45300FBC66D /* LoginView.swift in Sources */,
 				A17A000C2BD8C45300FBC66D /* AuthHeaderView.swift in Sources */,
 				A17A000A2BD8C45300FBC66D /* PasswordReset.swift in Sources */,
+				A1FF58C12BD8D0FC00411D8D /* NewPostView.swift in Sources */,
 				A17A00102BD8C45300FBC66D /* LocationManager.swift in Sources */,
 				736EF5402BD8A93A00724E61 /* BadgeBackground.swift in Sources */,
 				06CAFF512BD8C9E20014679A /* Feed.swift in Sources */,

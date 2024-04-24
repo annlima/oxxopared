@@ -14,7 +14,7 @@ struct LoginView: View {
     var body: some View {
         NavigationView{
             VStack {
-                AuthHeaderView(title1: "Hola,", title2: "Bienvenido de nuevo.")
+                AuthHeaderView(title1: "Hola,", title2: "bienvenido de nuevo.")
                 
                 VStack(spacing: 40) {
                     CustomInputField(imageName: "phone",
