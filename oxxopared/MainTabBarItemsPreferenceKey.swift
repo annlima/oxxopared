@@ -22,11 +22,15 @@ struct MainTabBarItemViewModifier: ViewModifier {
     @Binding var selection: MainTabBarItem
     
     func body(content: Content) -> some View {
-        content
-            .opacity(selection == tab ? 1.0: 0.0)
-            .preference(key: MainTabBarItemsPreferenceKey.self, value: [tab])
+        Group {
+            if selection == tab {
+                content
+            }
+        }
+        .preference(key: MainTabBarItemsPreferenceKey.self, value: [tab])
     }
 }
+
 
 extension View {
     func mainTabBarItem (tab: MainTabBarItem, selection: Binding<MainTabBarItem>) -> some View {
