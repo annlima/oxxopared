@@ -29,6 +29,9 @@
 		9B8883412BD8E555002C89E2 /* MainFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8883402BD8E555002C89E2 /* MainFeedView.swift */; };
 		9B8883452BD910AA002C89E2 /* SpotsARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8883442BD910AA002C89E2 /* SpotsARView.swift */; };
 		9B8883472BD91156002C89E2 /* Spots.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 9B8883462BD91156002C89E2 /* Spots.rcproject */; };
+		A11CA7552BD95DA500A5AFD1 /* NewPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11CA7542BD95DA500A5AFD1 /* NewPostView.swift */; };
+		A11CA7572BD95E1200A5AFD1 /* TaggerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11CA7562BD95E1200A5AFD1 /* TaggerView.swift */; };
+		A11CA7592BD95E3C00A5AFD1 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11CA7582BD95E3C00A5AFD1 /* SettingsView.swift */; };
 		A13344202BD8924A00A01D18 /* oxxoparedApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A133441F2BD8924A00A01D18 /* oxxoparedApp.swift */; };
 		A13344222BD8924A00A01D18 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13344212BD8924A00A01D18 /* ContentView.swift */; };
 		A13344242BD8924C00A01D18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A13344232BD8924C00A01D18 /* Assets.xcassets */; };
@@ -44,7 +47,6 @@
 		A17A000F2BD8C45300FBC66D /* CustomInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17A00072BD8C45300FBC66D /* CustomInputField.swift */; };
 		A17A00102BD8C45300FBC66D /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17A00082BD8C45300FBC66D /* LocationManager.swift */; };
 		A17A00112BD8C45300FBC66D /* TermsAndConditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17A00092BD8C45300FBC66D /* TermsAndConditions.swift */; };
-		A1FF58C12BD8D0FC00411D8D /* NewPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FF58C02BD8D0FC00411D8D /* NewPostView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +89,9 @@
 		9B8883402BD8E555002C89E2 /* MainFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFeedView.swift; sourceTree = "<group>"; };
 		9B8883442BD910AA002C89E2 /* SpotsARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotsARView.swift; sourceTree = "<group>"; };
 		9B8883462BD91156002C89E2 /* Spots.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Spots.rcproject; sourceTree = "<group>"; };
+		A11CA7542BD95DA500A5AFD1 /* NewPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostView.swift; sourceTree = "<group>"; };
+		A11CA7562BD95E1200A5AFD1 /* TaggerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaggerView.swift; sourceTree = "<group>"; };
+		A11CA7582BD95E3C00A5AFD1 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsView.swift; path = AuthAndOnboarding/SettingsView.swift; sourceTree = "<group>"; };
 		A133441C2BD8924A00A01D18 /* oxxopared.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = oxxopared.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A133441F2BD8924A00A01D18 /* oxxoparedApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oxxoparedApp.swift; sourceTree = "<group>"; };
 		A13344212BD8924A00A01D18 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -105,7 +110,6 @@
 		A17A00072BD8C45300FBC66D /* CustomInputField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomInputField.swift; sourceTree = "<group>"; };
 		A17A00082BD8C45300FBC66D /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		A17A00092BD8C45300FBC66D /* TermsAndConditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsAndConditions.swift; sourceTree = "<group>"; };
-		A1FF58C02BD8D0FC00411D8D /* NewPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +216,9 @@
 				06CAFF562BD8FE300014679A /* IllegalRelated.mlmodel */,
 				06CAFF4F2BD8C9890014679A /* Feed */,
 				A17A00012BD8C45300FBC66D /* AuthAndOnboarding */,
+				A11CA7582BD95E3C00A5AFD1 /* SettingsView.swift */,
+				A11CA7562BD95E1200A5AFD1 /* TaggerView.swift */,
+				A11CA7542BD95DA500A5AFD1 /* NewPostView.swift */,
 				736EF54A2BD8AB9B00724E61 /* Spot */,
 				736EF53E2BD8A93A00724E61 /* Profile */,
 				A133441F2BD8924A00A01D18 /* oxxoparedApp.swift */,
@@ -263,7 +270,6 @@
 				A17A00072BD8C45300FBC66D /* CustomInputField.swift */,
 				A17A00082BD8C45300FBC66D /* LocationManager.swift */,
 				A17A00092BD8C45300FBC66D /* TermsAndConditions.swift */,
-				A1FF58C02BD8D0FC00411D8D /* NewPostView.swift */,
 			);
 			path = AuthAndOnboarding;
 			sourceTree = "<group>";
@@ -398,6 +404,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A11CA7592BD95E3C00A5AFD1 /* SettingsView.swift in Sources */,
 				A17A000F2BD8C45300FBC66D /* CustomInputField.swift in Sources */,
 				736EF5442BD8A93A00724E61 /* HexagonParameters.swift in Sources */,
 				06CAFF532BD8CA2E0014679A /* SpotView.swift in Sources */,
@@ -418,14 +425,15 @@
 				A17A00112BD8C45300FBC66D /* TermsAndConditions.swift in Sources */,
 				A13344202BD8924A00A01D18 /* oxxoparedApp.swift in Sources */,
 				9B8883452BD910AA002C89E2 /* SpotsARView.swift in Sources */,
+				A11CA7572BD95E1200A5AFD1 /* TaggerView.swift in Sources */,
 				A17A000D2BD8C45300FBC66D /* LoginView.swift in Sources */,
 				9B88833F2BD8E50C002C89E2 /* MainTabBarItemsPreferenceKey.swift in Sources */,
 				A17A000C2BD8C45300FBC66D /* AuthHeaderView.swift in Sources */,
 				A17A000A2BD8C45300FBC66D /* PasswordReset.swift in Sources */,
-				A1FF58C12BD8D0FC00411D8D /* NewPostView.swift in Sources */,
 				A17A00102BD8C45300FBC66D /* LocationManager.swift in Sources */,
 				736EF5402BD8A93A00724E61 /* BadgeBackground.swift in Sources */,
 				9B88833B2BD8E476002C89E2 /* MainTabBarItem.swift in Sources */,
+				A11CA7552BD95DA500A5AFD1 /* NewPostView.swift in Sources */,
 				06CAFF572BD8FE300014679A /* IllegalRelated.mlmodel in Sources */,
 				9B8883472BD91156002C89E2 /* Spots.rcproject in Sources */,
 				06CAFF512BD8C9E20014679A /* Feed.swift in Sources */,
