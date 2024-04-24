@@ -21,7 +21,7 @@ extension Spot {
         Spot(
             title: "Busco a mi gato Mimmie",
             image: Image(.michi),
-            text: "Perdí mi gato en la Av. Eugenio Garza Sada. Cualquier información me ayudaría 🙏. Contaáctame al 0123456789",
+            text: "Perdí mi gato en la Av. Eugenio Garza Sada. Cualquier información me ayudaría 🙏. Contáctame al 0123456789",
             category: "Cosas perdidas"
         )
     }
