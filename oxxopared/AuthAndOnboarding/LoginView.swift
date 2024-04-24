@@ -107,19 +107,17 @@ struct LoginView: View {
         .navigationBarBackButtonHidden(true)
     }
     
-    func loginUser(){
-            isLoading=true
-            closeKeyboard()
-            Task{
-                do{
-                    try await Auth.auth().signIn(withEmail:email, password: password)
-                    print("User Found")
-                    try await fetchUser()
-                }catch{
-                    await setError(error)
-                }
+    func loginUser() {
+        Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
+            if let error = error {
+                print("Error al iniciar sesión: \(error.localizedDescription)")
+            } else {
+                print("Sesión iniciada con éxito")
+                // Actualizar @AppStorage o estado aquí si es necesario
             }
         }
+    }
+
     
     func fetchUser()async throws{
             guard let userID = Auth.auth().currentUser?.uid else{return}

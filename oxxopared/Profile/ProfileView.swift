@@ -193,11 +193,15 @@ struct ProfileView: View {
             })
         }
     
-    func logOutUser(){
-            try? Auth.auth().signOut()
-            userUID = ""
-            nombreCompleto = ""
+    func logoutUser() {
+        do {
+            try Auth.auth().signOut()
+            // Limpia los datos guardados y el estado aquí
             logstatus = false
+            nombreCompleto = ""
+            userUID = ""
+        } catch let signOutError as NSError {
+            print("Error al cerrar sesión: \(signOutError.localizedDescription)")
         }
         
         func deleteAccount(){
@@ -225,6 +229,7 @@ struct ProfileView: View {
                 showError.toggle()
             })
         }
+    }
 }
 
 struct ProfileView_Previews: PreviewProvider {
