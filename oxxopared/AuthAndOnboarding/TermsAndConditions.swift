@@ -20,29 +20,37 @@ struct TermsAndConditions: View {
 }
 
 private let termsAndConditionsText = """
-Bienvenido a echoChallenges. Al acceder y utilizar nuestra red social, usted acepta estar sujeto a los siguientes términos y condiciones. Si no está de acuerdo con alguno de estos términos, no utilice nuestro servicio.
+1. Aceptación de los Términos
+Al acceder y utilizar nuestra aplicación, usted acepta cumplir y estar vinculado por los siguientes términos y condiciones. Si no está de acuerdo con alguno de estos términos, debe abstenerse de usar nuestros servicios.
 
-Privacidad
-Su privacidad es importante para nosotros. Nuestra Política de Privacidad explica cómo recopilamos, utilizamos y protegemos su información personal. Al utilizar nuestro servicio, acepta que podamos procesar su información de acuerdo con estas políticas.
+2. Derechos Humanos y Diversidad
+Nos comprometemos a respetar los derechos humanos y promover la diversidad e inclusión. Nuestros servicios están diseñados para ser accesibles y equitativos para todos, sin discriminación por raza, género, edad, discapacidad, orientación sexual, nacionalidad o cualquier otra característica personal.
 
-Uso del Servicio
-Usted acuerda utilizar echoChallenges de manera responsable y conforme a la ley. No está permitido publicar contenido violento, discriminatorio, ilegal o que infrinja los derechos de terceros. Nos reservamos el derecho de eliminar contenido que consideremos inapropiado.
+3. Uso Ético de la Información
+La información personal que se recolecte a través de nuestra aplicación será tratada con la máxima confidencialidad y respeto. Nos comprometemos a proteger su privacidad y a utilizar su información solo para los fines especificados y consentidos.
 
-Cuentas
-Al crear una cuenta en echoChallenges, usted es responsable de mantener la seguridad de su cuenta y de todas las actividades que ocurran bajo el uso de su cuenta. Debe notificarnos inmediatamente sobre cualquier uso no autorizado de su cuenta.
+4. Prácticas Laborales
+Aseguramos que todas nuestras operaciones respeten los principios y derechos fundamentales en el trabajo, incluyendo la prohibición de trabajo forzoso y la explotación infantil. Esperamos que nuestros proveedores y socios comerciales cumplan con estos mismos estándares.
 
-Derechos de Autor
-Respetamos los derechos de autor y esperamos que nuestros usuarios hagan lo mismo. Es su responsabilidad asegurarse de que el contenido que comparte no infrinja los derechos de autor de terceros.
+5. Publicidad y Comunicaciones
+Toda publicidad y comunicación en nuestra plataforma será honesta y transparente, evitando la publicidad engañosa y cumpliendo con los estándares éticos más altos.
 
-Modificaciones a los Términos
-Podemos modificar estos términos y condiciones en cualquier momento. Al continuar utilizando nuestro servicio después de que se realicen cambios, usted acepta estar sujeto a los términos modificados.
+6. Medio Ambiente
+Nos comprometemos a operar de manera sostenible y minimizar nuestro impacto ambiental. Nuestra aplicación y servicios buscan promover prácticas que protejan y preserven el medio ambiente.
 
-Contacto
-Si tiene preguntas sobre estos términos, por favor contáctenos a través de [Método de Contacto].
+7. Cumplimiento Legal
+Cumplimos con todas las leyes y regulaciones aplicables en los territorios donde operamos. Esperamos que los usuarios utilicen nuestros servicios de manera legal y responsable.
 
-Fecha de Vigencia: 26 de Febrero de 2025
+8. Modificaciones de los Términos y Condiciones
+Nos reservamos el derecho de modificar estos términos y condiciones en cualquier momento. Las modificaciones entrarán en vigor inmediatamente después de su publicación en nuestra plataforma.
 
-© [2024] [echoChallenges]. Todos los derechos reservados.
+9. Resolución de Conflictos
+Cualquier disputa relacionada con el uso de nuestros servicios será resuelta a través de mediación o arbitraje, buscando siempre una resolución justa y equitativa para todas las partes involucradas.
+
+10. Contacto
+Para cualquier pregunta o preocupación relacionada con estos términos y condiciones, por favor contacte a nuestro equipo de soporte al cliente.
+
+
 
 """
 
