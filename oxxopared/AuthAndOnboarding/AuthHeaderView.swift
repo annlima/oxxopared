@@ -21,7 +21,7 @@ struct AuthHeaderView: View {
     var body: some View {
         ZStack {
             WaveShape()
-                .fill(LinearGradient(gradient: Gradient(colors: [Color("ColorPrincipal").opacity(0.5), Color("ColorPrincipal")]), startPoint: .topLeading, endPoint: .bottomTrailing))
+                .fill(LinearGradient(gradient: Gradient(colors: [Color("RedMain").opacity(0.8), Color("RedMain")]), startPoint: .topLeading, endPoint: .bottomTrailing))
                 .frame(height: 300)
                 .edgesIgnoringSafeArea(.all)
             VStack {

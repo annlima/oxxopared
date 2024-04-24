@@ -15,17 +15,17 @@
 import SwiftUI
 
 struct PasswordResetView: View {
-    @State private var email = ""
+    @State private var phonenumber = ""
     
     var body: some View {
         VStack {
             AuthHeaderView(title1: "Recuperación de", title2: "contraseña")
             
             VStack(spacing: 40) {
-                CustomInputField(imageName: "envelope",
-                                 placeholderText: "Correo electrónico",
-                                 isSecureField: false, // No es un campo seguro ya que es un correo electrónico
-                                 text: $email)
+                CustomInputField(imageName: "phone",
+                                 placeholderText: "Número de teléfono",
+                                 isSecureField: false,
+                                 text: $phonenumber)
             }
             .padding(.horizontal, 32)
             .padding(.top, 44)
@@ -46,7 +46,7 @@ struct PasswordResetView: View {
                     .fontWeight(.bold)
                     .foregroundColor(.white)
                     .frame(width: 340, height: 50)
-                    .background(Color("ColorPrincipal"))
+                    .background(Color("RedMain") .opacity(0.9))
                     .clipShape(Capsule())
                     .padding()
             }
@@ -60,7 +60,7 @@ struct PasswordResetView: View {
             } label: {
                 Text("Volver al inicio de sesión")
                     .fontWeight(.semibold)
-                    .foregroundColor(Color("ColorPrincipal"))
+                    .foregroundColor(Color("RedMain") .opacity(0.9))
             }
             .padding(.bottom, 32)
         }

@@ -38,7 +38,7 @@ struct LoginView: View {
                         Text("¿Olvidaste tu contraseña?")
                             .font(.caption)
                             .fontWeight(.semibold)
-                            .foregroundColor(Color("ColorPrincipal"))
+                            .foregroundColor(Color("RedMain") .opacity(0.9))
                             .padding(.top)
                             .padding(.trailing, 24)
                     }
@@ -52,7 +52,7 @@ struct LoginView: View {
                         .font(.headline)
                         .foregroundColor(.white)
                         .frame(width: 340, height: 50)
-                        .background(Color("ColorPrincipal"))
+                        .background(Color("RedMain") .opacity(0.9))
                         .clipShape(Capsule())
                         .padding()
                 }
@@ -74,7 +74,7 @@ struct LoginView: View {
                     }
                 }
                 .padding(.bottom, 32)
-                .foregroundColor(Color("ColorPrincipal"))
+                .foregroundColor(Color("RedMain") .opacity(0.9))
             }
             .navigationBarBackButtonHidden(true)
             .ignoresSafeArea()
