@@ -19,16 +19,17 @@ struct Feed: View {
                 Ellipse()
                     .fill(Color.redMain)
                     .frame(width: 600, height: 300)
- 
-                    .padding(.top, -300) // Posiciona la elipse hacia arriba para que solo se vea la mitad
+                    .padding(.top, -235) // Posiciona la elipse hacia arriba para que solo se vea la mitad
                     .padding(.horizontal, 50)
-                
                 
                 Text("¡Hola! Ve que hay de nuevo en tu comunidad")
                     .foregroundStyle(.white)
-                    .padding(.top, -120)
+                    .padding(.top, -70)
                     .font(.title)
+                    .fontWeight(.semibold)
                     .frame(width: 300, height: 300)
+                    .padding(.leading)
+                    .multilineTextAlignment(.center)
             }
             
             
