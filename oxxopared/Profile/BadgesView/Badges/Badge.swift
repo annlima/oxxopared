@@ -14,40 +14,39 @@ func getBadge(type: Int, width: CGFloat) -> Badge {
         
     case 0: 
         return Badge(
-            gradientStart: Color(red: 105 / 255.0, green: 202 / 255.0, blue: 255 / 255.0),
-            gradientEnd: Color.blue,
-            symbolColor: .white,
+            gradientStart: Color(red: 240.0 / 255.0, green: 180 / 255.0, blue: 0 / 255.0),
+            gradientEnd: Color(red: 240.0 / 255.0, green: 180 / 255.0, blue: 0 / 255.0),            symbolColor: .white,
             width: width
         )
         
     case 10:
         return Badge(
-            gradientStart: Color(red: 105 / 255.0, green: 202 / 255.0, blue: 255 / 255.0),
-            gradientEnd: Color.blue,
-            symbolColor: Color(red: 255 / 255.0, green: 87 / 255.0, blue: 51 / 255.0),
+            gradientStart: Color(red: 240.0 / 255.0, green: 180 / 255.0, blue: 0 / 255.0),
+            gradientEnd: Color(red: 240.0 / 255.0, green: 180 / 255.0, blue: 0 / 255.0),
+            symbolColor: .black,
             width: width
         )
         
     case 20:
         return Badge(
-            gradientStart: Color(red: 105 / 255.0, green: 202 / 255.0, blue: 255 / 255.0),
-            gradientEnd: Color.blue,
-            symbolColor: Color(red: 212 / 255.0, green: 175 / 255.0, blue: 55 / 255.0),
+            gradientStart: Color(red: 240.0 / 255.0, green: 180 / 255.0, blue: 0 / 255.0),
+            gradientEnd: Color(red: 240.0 / 255.0, green: 180 / 255.0, blue: 0 / 255.0),
+            symbolColor: .teal,
             width: width
         )
         
     case 30:
         return Badge(
-            gradientStart: Color(red: 105 / 255.0, green: 202 / 255.0, blue: 255 / 255.0),
-            gradientEnd: Color.blue,
-            symbolColor: .black,
+            gradientStart: Color(red: 240.0 / 255.0, green: 180 / 255.0, blue: 0 / 255.0),
+            gradientEnd: Color(red: 240.0 / 255.0, green: 180 / 255.0, blue: 0 / 255.0),
+            symbolColor: .red,
             width: width
         )
         
     case 1:
         return Badge(
             gradientStart: Color(red: 255.0 / 255.0, green: 170 / 255.0, blue: 66 / 255.0),
-            gradientEnd: Color.orange,
+            gradientEnd: Color(red: 255/255.0, green: 108/255.0, blue: 3/255.0),
             symbolColor: .white,
             width: width
         )
@@ -55,24 +54,24 @@ func getBadge(type: Int, width: CGFloat) -> Badge {
     case 11:
         return Badge(
             gradientStart: Color(red: 255.0 / 255.0, green: 170 / 255.0, blue: 66 / 255.0),
-            gradientEnd: Color.orange,
-            symbolColor: Color(red: 255 / 255.0, green: 87 / 255.0, blue: 51 / 255.0),
+            gradientEnd: Color(red: 255/255.0, green: 108/255.0, blue: 3/255.0),
+            symbolColor: .black,
             width: width
         )
         
     case 21:
         return Badge(
             gradientStart: Color(red: 255.0 / 255.0, green: 170 / 255.0, blue: 66 / 255.0),
-            gradientEnd: Color.orange,
-            symbolColor: Color(red: 212 / 255.0, green: 175 / 255.0, blue: 55 / 255.0),
+            gradientEnd: Color(red: 255/255.0, green: 108/255.0, blue: 3/255.0),
+            symbolColor: Color(red: 3/255.0, green: 170/255.0, blue: 255/255.0),
             width: width
         )
         
     case 31:
         return Badge(
             gradientStart: Color(red: 255.0 / 255.0, green: 170 / 255.0, blue: 66 / 255.0),
-            gradientEnd: Color.orange,
-            symbolColor: .black,
+            gradientEnd: Color(red: 255/255.0, green: 108/255.0, blue: 3/255.0),
+            symbolColor: Color(red: 209/255.0, green: 10/255.0, blue: 3/255.0),
             width: width
         )
         
@@ -80,7 +79,31 @@ func getBadge(type: Int, width: CGFloat) -> Badge {
         return Badge(
             gradientStart: Color.mint,
             gradientEnd: Color.teal,
+            symbolColor: .white,
+            width: width
+        )
+        
+    case 12:
+        return Badge(
+            gradientStart: Color.mint,
+            gradientEnd: Color.teal,
             symbolColor: .black,
+            width: width
+        )
+            
+    case 22:
+        return Badge(
+            gradientStart: Color.mint,
+            gradientEnd: Color.teal,
+            symbolColor: Color(red: 0 / 255.0, green: 36 / 255.0, blue: 153 / 255.0),
+            width: width
+        )
+            
+    case 32:
+        return Badge(
+            gradientStart: Color.mint,
+            gradientEnd: Color.teal,
+            symbolColor: Color(red: 16.0 / 255.0, green: 143 / 255.0, blue: 11 / 255.0),
             width: width
         )
         
@@ -114,10 +137,35 @@ func getTypeBadge(type: Int) -> String{
         return "Colaborador - Contribuyente"
     
     case 30:
-        return "Colaborador - Representate"
+        return "Colaborador - Representante"
     
-    case 4:
+    
+    case 1:
+        return "Vigilante - Oyente"
+        
+    case 11:
+        return "Vigilante - Participante"
+    
+    case 21:
+        return "Vigilante - Contribuyente"
+    
+    case 31:
+        return "Vigilante - Representante"
+    
+    
+        
+    case 2:
         return "Ecológico - Oyente"
+        
+    case 12:
+        return "Ecológico - Participante"
+    
+    case 22:
+        return "Ecológico - Contribuyente"
+    
+    case 32:
+        return "Ecológico - Representante"
+    
         
     default:
         return ""
@@ -131,16 +179,16 @@ func getAboutBadge(type: Int) -> String{
         return "Contribuyente: eres un miembro activo de tu comunidad"
         
     case 10:
-        return "El periodista: tu denuncia fue elegida"
+        return "Contribuyente: haz destacado con tu participación en la comunidad"
     
     case 20:
-        return "Has hecho 30 denuncias"
+        return "Contribuyente: "
     
     case 30:
-        return "Has hecho 20 denuncias"
-    
-    case 4:
-        return "Has hecho 10 denuncias"
+        return "Contribuyente: "
+        
+    case 2:
+        return "Ecológico"
         
     default:
         return ""

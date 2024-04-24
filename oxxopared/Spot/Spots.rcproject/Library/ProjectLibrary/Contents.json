@@ -5,8 +5,23 @@
     "displayName" : "F73EC515-C75A-44FD-8011-2AF682E695E0.jpeg"
   },
   {
-    "format" : "image",
+    "libraryIdentifier" : "19fe0a2db91208db96f77856fbcf982b",
     "displayName" : "577f75aa-f27a-48a3-a378-e32a3a136f35.jpeg",
-    "libraryIdentifier" : "19fe0a2db91208db96f77856fbcf982b"
+    "format" : "image"
+  },
+  {
+    "format" : "image",
+    "displayName" : "suavel.png",
+    "libraryIdentifier" : "3393318ed460d0848d3daf2dba086117"
+  },
+  {
+    "format" : "image",
+    "libraryIdentifier" : "eac901e264309bf4ccb87fbfdf583c81",
+    "displayName" : "petalo.png"
+  },
+  {
+    "displayName" : "raid.png",
+    "libraryIdentifier" : "039fb31bd65f17e0c3e03d5a6f09f07b",
+    "format" : "image"
   }
 ]

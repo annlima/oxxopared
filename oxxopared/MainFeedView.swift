@@ -9,8 +9,10 @@ import SwiftUI
 
 struct MainFeedView: View {
     @State var selectedTab: MainTabBarItem = .announcements 
+    @EnvironmentObject private var authModel: AuthViewModel
 
     var body: some View {
+        
         ZStack {
             VStack{
                 ZStack(alignment: .top) {

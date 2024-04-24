@@ -8,8 +8,21 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @EnvironmentObject private var authModel: AuthViewModel
+    
+    
     var body: some View {
-        LoginView()
+        
+        Group {
+            if authModel.user != nil {
+                MainFeedView()
+            } else {
+                LoginView()
+            }
+        }.onAppear {
+            authModel.listenToAuthState()
+        }
     }
 }
 
