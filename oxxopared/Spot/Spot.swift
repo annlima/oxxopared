@@ -8,13 +8,13 @@
 import Foundation
 import SwiftUI
 
-struct Spot {
+struct Spot: Identifiable {
+    let id = UUID() // Genera un UUID único como identificador
     let title: String
     let image: Image?
     let text: String
     let category: String // oportunidades, servicios, artículos de segunda mano, cosas perdidas
 }
-
 extension Spot {
     
     static var spot1: Spot {
