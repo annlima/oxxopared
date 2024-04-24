@@ -21,6 +21,9 @@ struct PostData {
 
 struct NewPostView: View {
 
+    @EnvironmentObject var spotStore: SpotStore // EnvironmentObject for the spots
+
+    
     @State private var image: Data?
     @State private var item: PhotosPickerItem?
     @State var titleText: String = ""
@@ -117,32 +120,38 @@ struct NewPostView: View {
                     }
 
                     Button("Publicar") {
-                            if let uiImage = selectedImage {
-                                if let pixelBuffer = pixelBufferConv(from:uiImage) {
-                                    // Realiza la predicción con el pixelBuffer
-                                    do {
-                                        let config = MLModelConfiguration()
-                                        let model = try IllegalRelated(configuration: config)
+                        if let uiImage = selectedImage {
+                            if let pixelBuffer = pixelBufferConv(from:uiImage) {
+                                // Realiza la predicción con el pixelBuffer
+                                do {
+                                    let config = MLModelConfiguration()
+                                    let model = try IllegalRelated(configuration: config)
 
-                                        let prediction = try model.prediction(image: pixelBuffer)
-                                        print(prediction.target)
-                                        if prediction.target=="Legal"
-                                            {
-                                                            
-                                                validImage=true;
-                                            }
-                                            
-                                    } catch {
-                                        print("Error al hacer la predicción: \(error)")
-                                    }
-                                    } else {
-                                        print("Error: No se pudo convertir la imagen a pixelBuffer")
-                                    }
-                                    } else {
-                                        // Provide user feedback about the error
-                                        print("Error: No image selected")
-                                    }
+                                    let prediction = try model.prediction(image: pixelBuffer)
+                                    // Usa el resultado de la predicción según sea necesario
+                            
+                                } catch {
+                                    print("Error al hacer la predicción: \(error)")
+                                }
+                            } else {
+                                print("Error: No se pudo convertir la imagen a pixelBuffer")
                             }
+                            
+                            
+                            let newImage: Image?
+                                if let selectedImage = selectedImage {
+                                    newImage = Image(uiImage: selectedImage)
+                                } else {
+                                    newImage = nil  // Keep newImage as nil if there's no selected image
+                                }
+                            spotStore.addSpot(title: titleText, image: newImage, text: caption, category: selectedCategory)
+                                        dismiss()
+                           
+                        } else {
+                            // Provide user feedback about the error
+                            print("Error: No image selected")
+                        }
+                    }
                     .padding(.vertical, 12)
                     .padding(.horizontal, 30)
                     .font(.headline)

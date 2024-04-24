@@ -33,6 +33,7 @@
 		9B8883412BD8E555002C89E2 /* MainFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8883402BD8E555002C89E2 /* MainFeedView.swift */; };
 		9B8883452BD910AA002C89E2 /* SpotsARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8883442BD910AA002C89E2 /* SpotsARView.swift */; };
 		9B8883472BD91156002C89E2 /* Spots.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 9B8883462BD91156002C89E2 /* Spots.rcproject */; };
+		9B88834B2BD97898002C89E2 /* SpotStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B88834A2BD97898002C89E2 /* SpotStore.swift */; };
 		A11CA7552BD95DA500A5AFD1 /* NewPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11CA7542BD95DA500A5AFD1 /* NewPostView.swift */; };
 		A11CA7572BD95E1200A5AFD1 /* TaggerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11CA7562BD95E1200A5AFD1 /* TaggerView.swift */; };
 		A11CA7592BD95E3C00A5AFD1 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11CA7582BD95E3C00A5AFD1 /* SettingsView.swift */; };
@@ -106,6 +107,7 @@
 		9B8883402BD8E555002C89E2 /* MainFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFeedView.swift; sourceTree = "<group>"; };
 		9B8883442BD910AA002C89E2 /* SpotsARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotsARView.swift; sourceTree = "<group>"; };
 		9B8883462BD91156002C89E2 /* Spots.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Spots.rcproject; sourceTree = "<group>"; };
+		9B88834A2BD97898002C89E2 /* SpotStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotStore.swift; sourceTree = "<group>"; };
 		A11CA7542BD95DA500A5AFD1 /* NewPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostView.swift; sourceTree = "<group>"; };
 		A11CA7562BD95E1200A5AFD1 /* TaggerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaggerView.swift; sourceTree = "<group>"; };
 		A11CA7582BD95E3C00A5AFD1 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsView.swift; path = AuthAndOnboarding/SettingsView.swift; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 				06CAFF522BD8CA2E0014679A /* SpotView.swift */,
 				06CAFF542BD8CC690014679A /* SpotManager.swift */,
 				9B8883442BD910AA002C89E2 /* SpotsARView.swift */,
+				9B88834A2BD97898002C89E2 /* SpotStore.swift */,
 			);
 			path = Spot;
 			sourceTree = "<group>";
@@ -494,6 +497,7 @@
 				A17A00102BD8C45300FBC66D /* LocationManager.swift in Sources */,
 				736EF5402BD8A93A00724E61 /* BadgeBackground.swift in Sources */,
 				9B88833B2BD8E476002C89E2 /* MainTabBarItem.swift in Sources */,
+				9B88834B2BD97898002C89E2 /* SpotStore.swift in Sources */,
 				A11CA7552BD95DA500A5AFD1 /* NewPostView.swift in Sources */,
 				06CAFF572BD8FE300014679A /* IllegalRelated.mlmodel in Sources */,
 				9B8883472BD91156002C89E2 /* Spots.rcproject in Sources */,
@@ -664,7 +668,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"oxxopared/Preview Content\"";
-				DEVELOPMENT_TEAM = SAM2A296M4;
+				DEVELOPMENT_TEAM = KS6DBFHYN6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = oxxopared/Info.plist;
@@ -679,7 +683,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Andy.x1;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Andy.oxxopared.-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -695,7 +699,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"oxxopared/Preview Content\"";
-				DEVELOPMENT_TEAM = SAM2A296M4;
+				DEVELOPMENT_TEAM = KS6DBFHYN6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = oxxopared/Info.plist;
@@ -710,7 +714,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Andy.x1;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Andy.oxxopared.-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
