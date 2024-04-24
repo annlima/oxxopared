@@ -18,6 +18,7 @@
 		736EF5472BD8A93A00724E61 /* MyPlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736EF53B2BD8A93A00724E61 /* MyPlaceView.swift */; };
 		736EF5482BD8A93A00724E61 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736EF53C2BD8A93A00724E61 /* Profile.swift */; };
 		736EF5492BD8A93A00724E61 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736EF53D2BD8A93A00724E61 /* ProfileView.swift */; };
+		736EF54C2BD8ABAA00724E61 /* Spot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736EF54B2BD8ABAA00724E61 /* Spot.swift */; };
 		A13344202BD8924A00A01D18 /* oxxoparedApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A133441F2BD8924A00A01D18 /* oxxoparedApp.swift */; };
 		A13344222BD8924A00A01D18 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13344212BD8924A00A01D18 /* ContentView.swift */; };
 		A13344242BD8924C00A01D18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A13344232BD8924C00A01D18 /* Assets.xcassets */; };
@@ -56,6 +57,7 @@
 		736EF53B2BD8A93A00724E61 /* MyPlaceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPlaceView.swift; sourceTree = "<group>"; };
 		736EF53C2BD8A93A00724E61 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		736EF53D2BD8A93A00724E61 /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		736EF54B2BD8ABAA00724E61 /* Spot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spot.swift; sourceTree = "<group>"; };
 		A133441C2BD8924A00A01D18 /* oxxopared.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = oxxopared.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A133441F2BD8924A00A01D18 /* oxxoparedApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oxxoparedApp.swift; sourceTree = "<group>"; };
 		A13344212BD8924A00A01D18 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -127,6 +129,14 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
+		736EF54A2BD8AB9B00724E61 /* Spot */ = {
+			isa = PBXGroup;
+			children = (
+				736EF54B2BD8ABAA00724E61 /* Spot.swift */,
+			);
+			path = Spot;
+			sourceTree = "<group>";
+		};
 		A13344132BD8924A00A01D18 = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +160,7 @@
 		A133441E2BD8924A00A01D18 /* oxxopared */ = {
 			isa = PBXGroup;
 			children = (
+				736EF54A2BD8AB9B00724E61 /* Spot */,
 				736EF53E2BD8A93A00724E61 /* Profile */,
 				A133441F2BD8924A00A01D18 /* oxxoparedApp.swift */,
 				A13344212BD8924A00A01D18 /* ContentView.swift */,
@@ -319,6 +330,7 @@
 				736EF5482BD8A93A00724E61 /* Profile.swift in Sources */,
 				736EF5432BD8A93A00724E61 /* BadgeSymbol.swift in Sources */,
 				736EF5472BD8A93A00724E61 /* MyPlaceView.swift in Sources */,
+				736EF54C2BD8ABAA00724E61 /* Spot.swift in Sources */,
 				736EF5452BD8A93A00724E61 /* RotatedBadgeSymbol.swift in Sources */,
 				A13344222BD8924A00A01D18 /* ContentView.swift in Sources */,
 				736EF53F2BD8A93A00724E61 /* Badge.swift in Sources */,

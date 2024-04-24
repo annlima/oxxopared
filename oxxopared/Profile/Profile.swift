@@ -10,27 +10,15 @@ import SwiftUI
 
 struct Profile {
     let name: String
-    let headline: String
-    let about: String
-    let backgroundPhoto: Image
     let profilePhoto: Image
-    let isVerified: Bool
-    let location: String
-    let age: Int
-    let ig: String
-    let tw: String
-    let fb: String
-    
-    let posts: [Post]?
-    let complaints: [Complaint]?
-    let reunions: [Reunion]?
-    let experiences: [Experience]?
-    let badges: [Int]
+    let spinPremia: Int
+    let spots: [Spot]?
 }
+
 
 extension Profile {
     
-    static var andy: Profile {
+    /*static var andy: Profile {
         Profile(
             name: "Andrea Lima",
             headline: "Estudiante de Ing. Sistemas Computacionales @ UDLAP",
@@ -158,5 +146,5 @@ extension Profile {
             badges: [0, 1, 2, 3, 4]
             
         )
-    }
+    }*/
 }
