@@ -3,7 +3,7 @@ import MapKit
 
 struct ProfileView: View {
     
-    let profile: Profile = .andy
+    /*let profile: Profile = .andy
     @State var text: String = ""
     @State private var isSelectedPosts = true
     @State private var isSelectedComplaint = false
@@ -16,8 +16,13 @@ struct ProfileView: View {
     @State private var navigateToSettings = false // To control navigation to the settings view
     @State private var navigateToLogIn = false // To control navigation to the login view
     @State private var badgeEarned = false
-    
+    */
     var body: some View {
+        
+        Text("hola")
+        /*
+        
+                          
         NavigationStack {
             ScrollView {
                 ZStack(alignment: .topTrailing) {
@@ -176,7 +181,7 @@ struct ProfileView: View {
             .ignoresSafeArea()
         }
         .navigationBarHidden(true)
-
+                          */
     }
 }
 
