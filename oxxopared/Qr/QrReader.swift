@@ -17,16 +17,19 @@ struct QrReader: View {
         {
             ZStack
             {
-                Rectangle()
-                    .fill(.redMain)
-                    .frame(width: .infinity, height: 200)
+                ZStack{
+                    Rectangle()
+                        .fill(.redMain)
+                        .frame(width: .infinity, height: 200)
+                }.padding(.top, -23)
+                
                 Text("Escanea el código QR de tu ticket de compra para poder publicar tu anuncio a la comunidad")
                     .multilineTextAlignment(.center)
                     .padding()
                     .font(.title3)
                     .foregroundStyle(.white)
             }
-            
+            .padding(.top, 23)
             
             QRScanner(result: $scanResult)
 
