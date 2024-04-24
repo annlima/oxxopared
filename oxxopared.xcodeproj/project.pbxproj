@@ -56,6 +56,7 @@
 		A13344312BD8924C00A01D18 /* oxxoparedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13344302BD8924C00A01D18 /* oxxoparedTests.swift */; };
 		A133443B2BD8924C00A01D18 /* oxxoparedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A133443A2BD8924C00A01D18 /* oxxoparedUITests.swift */; };
 		A133443D2BD8924C00A01D18 /* oxxoparedUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A133443C2BD8924C00A01D18 /* oxxoparedUITestsLaunchTests.swift */; };
+		A14EDC1E2BD9B322000E4F2F /* AnimatedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14EDC1D2BD9B322000E4F2F /* AnimatedImageView.swift */; };
 		A17A000A2BD8C45300FBC66D /* PasswordReset.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17A00022BD8C45300FBC66D /* PasswordReset.swift */; };
 		A17A000B2BD8C45300FBC66D /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17A00032BD8C45300FBC66D /* RegistrationView.swift */; };
 		A17A000C2BD8C45300FBC66D /* AuthHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17A00042BD8C45300FBC66D /* AuthHeaderView.swift */; };
@@ -130,6 +131,7 @@
 		A13344362BD8924C00A01D18 /* oxxoparedUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = oxxoparedUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A133443A2BD8924C00A01D18 /* oxxoparedUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oxxoparedUITests.swift; sourceTree = "<group>"; };
 		A133443C2BD8924C00A01D18 /* oxxoparedUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oxxoparedUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A14EDC1D2BD9B322000E4F2F /* AnimatedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedImageView.swift; sourceTree = "<group>"; };
 		A17A00022BD8C45300FBC66D /* PasswordReset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordReset.swift; sourceTree = "<group>"; };
 		A17A00032BD8C45300FBC66D /* RegistrationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		A17A00042BD8C45300FBC66D /* AuthHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthHeaderView.swift; sourceTree = "<group>"; };
@@ -300,6 +302,7 @@
 				9B88833E2BD8E50C002C89E2 /* MainTabBarItemsPreferenceKey.swift */,
 				9B8883402BD8E555002C89E2 /* MainFeedView.swift */,
 				73F3398A2BD982FB0097281E /* ExtensionView.swift */,
+				A14EDC1D2BD9B322000E4F2F /* AnimatedImageView.swift */,
 			);
 			path = oxxopared;
 			sourceTree = "<group>";
@@ -497,6 +500,7 @@
 				73F339912BD98BA20097281E /* ReusableProfileContent.swift in Sources */,
 				9B88833D2BD8E4EB002C89E2 /* MainTabBarContainerView.swift in Sources */,
 				736EF5492BD8A93A00724E61 /* ProfileView.swift in Sources */,
+				A14EDC1E2BD9B322000E4F2F /* AnimatedImageView.swift in Sources */,
 				736EF5482BD8A93A00724E61 /* Profile.swift in Sources */,
 				06CAFF552BD8CC690014679A /* SpotManager.swift in Sources */,
 				736EF54E2BD8B98C00724E61 /* Utils.swift in Sources */,
