@@ -80,21 +80,21 @@ struct NewPostView: View {
                     TextField("Agrega un título", text: $titleText)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .padding(.horizontal)
-                    HStack
-                    {
+
+                    HStack {
                         Text("Agrega una descripción")
-                            .foregroundStyle(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/.opacity(0.3))
+                            .foregroundColor(.black.opacity(0.3)) // Increased opacity for better visibility
                             .padding(.horizontal)
                         Spacer()
                     }
 
-                    TextEditor(text: $titleText)
+                    TextEditor(text: $caption) // Changed to caption
                         .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .frame(height: 100) // You might want to specify a height
                         .padding(.horizontal)
-                        .border(Color.black.opacity(0.1))
+                        .overlay(RoundedRectangle(cornerRadius: 5).stroke(Color.gray, lineWidth: 1)) // Added border for better visibility
                         .padding(.horizontal)
 
-                    Spacer()
 
                     VStack {
                         TaggerView()
