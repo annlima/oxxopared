@@ -1,12 +1,5 @@
 //
 //  AuthHeaderView.swift
-//  oxxopared
-//
-//  Created by Andrea Lima Blanca on 23/04/24.
-//
-
-//
-//  AuthHeaderView.swift
 //  echo
 //
 //  Created by Andrea Lima Blanca on 25/02/24.
@@ -21,7 +14,7 @@ struct AuthHeaderView: View {
     var body: some View {
         ZStack {
             WaveShape()
-                .fill(LinearGradient(gradient: Gradient(colors: [Color("ColorPrincipal").opacity(0.5), Color("ColorPrincipal")]), startPoint: .topLeading, endPoint: .bottomTrailing))
+                .fill(LinearGradient(gradient: Gradient(colors: [Color("RedMain").opacity(0.8), Color("RedMain")]), startPoint: .topLeading, endPoint: .bottomTrailing))
                 .frame(height: 300)
                 .edgesIgnoringSafeArea(.all)
             VStack {

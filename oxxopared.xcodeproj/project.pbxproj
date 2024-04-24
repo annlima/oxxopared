@@ -7,7 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+<<<<<<< HEAD
 		73019AA82BD8D1FD00B812C9 /* ARview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73019AA72BD8D1FD00B812C9 /* ARview.swift */; };
+=======
+		06CAFF512BD8C9E20014679A /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CAFF502BD8C9E20014679A /* Feed.swift */; };
+		06CAFF532BD8CA2E0014679A /* SpotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CAFF522BD8CA2E0014679A /* SpotView.swift */; };
+		06CAFF552BD8CC690014679A /* SpotManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CAFF542BD8CC690014679A /* SpotManager.swift */; };
+>>>>>>> main
 		736EF53F2BD8A93A00724E61 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736EF5312BD8A93A00724E61 /* Badge.swift */; };
 		736EF5402BD8A93A00724E61 /* BadgeBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736EF5322BD8A93A00724E61 /* BadgeBackground.swift */; };
 		736EF5412BD8A93A00724E61 /* BadgeEarnedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736EF5332BD8A93A00724E61 /* BadgeEarnedView.swift */; };
@@ -20,7 +26,14 @@
 		736EF5492BD8A93A00724E61 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736EF53D2BD8A93A00724E61 /* ProfileView.swift */; };
 		736EF54C2BD8ABAA00724E61 /* Spot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736EF54B2BD8ABAA00724E61 /* Spot.swift */; };
 		736EF54E2BD8B98C00724E61 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736EF54D2BD8B98C00724E61 /* Utils.swift */; };
+<<<<<<< HEAD
 		73C065052BD8F58700E635B2 /* Spot1.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 73C065042BD8F58700E635B2 /* Spot1.rcproject */; };
+=======
+		9B88833B2BD8E476002C89E2 /* MainTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B88833A2BD8E476002C89E2 /* MainTabBarItem.swift */; };
+		9B88833D2BD8E4EB002C89E2 /* MainTabBarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B88833C2BD8E4EB002C89E2 /* MainTabBarContainerView.swift */; };
+		9B88833F2BD8E50C002C89E2 /* MainTabBarItemsPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B88833E2BD8E50C002C89E2 /* MainTabBarItemsPreferenceKey.swift */; };
+		9B8883412BD8E555002C89E2 /* MainFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8883402BD8E555002C89E2 /* MainFeedView.swift */; };
+>>>>>>> main
 		A13344202BD8924A00A01D18 /* oxxoparedApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A133441F2BD8924A00A01D18 /* oxxoparedApp.swift */; };
 		A13344222BD8924A00A01D18 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13344212BD8924A00A01D18 /* ContentView.swift */; };
 		A13344242BD8924C00A01D18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A13344232BD8924C00A01D18 /* Assets.xcassets */; };
@@ -28,6 +41,15 @@
 		A13344312BD8924C00A01D18 /* oxxoparedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13344302BD8924C00A01D18 /* oxxoparedTests.swift */; };
 		A133443B2BD8924C00A01D18 /* oxxoparedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A133443A2BD8924C00A01D18 /* oxxoparedUITests.swift */; };
 		A133443D2BD8924C00A01D18 /* oxxoparedUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A133443C2BD8924C00A01D18 /* oxxoparedUITestsLaunchTests.swift */; };
+		A17A000A2BD8C45300FBC66D /* PasswordReset.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17A00022BD8C45300FBC66D /* PasswordReset.swift */; };
+		A17A000B2BD8C45300FBC66D /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17A00032BD8C45300FBC66D /* RegistrationView.swift */; };
+		A17A000C2BD8C45300FBC66D /* AuthHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17A00042BD8C45300FBC66D /* AuthHeaderView.swift */; };
+		A17A000D2BD8C45300FBC66D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17A00052BD8C45300FBC66D /* LoginView.swift */; };
+		A17A000E2BD8C45300FBC66D /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17A00062BD8C45300FBC66D /* Onboarding.swift */; };
+		A17A000F2BD8C45300FBC66D /* CustomInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17A00072BD8C45300FBC66D /* CustomInputField.swift */; };
+		A17A00102BD8C45300FBC66D /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17A00082BD8C45300FBC66D /* LocationManager.swift */; };
+		A17A00112BD8C45300FBC66D /* TermsAndConditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17A00092BD8C45300FBC66D /* TermsAndConditions.swift */; };
+		A1FF58C12BD8D0FC00411D8D /* NewPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FF58C02BD8D0FC00411D8D /* NewPostView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +70,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+<<<<<<< HEAD
 		73019AA72BD8D1FD00B812C9 /* ARview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARview.swift; sourceTree = "<group>"; };
+=======
+		06CAFF502BD8C9E20014679A /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
+		06CAFF522BD8CA2E0014679A /* SpotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotView.swift; sourceTree = "<group>"; };
+		06CAFF542BD8CC690014679A /* SpotManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotManager.swift; sourceTree = "<group>"; };
+>>>>>>> main
 		736EF5312BD8A93A00724E61 /* Badge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
 		736EF5322BD8A93A00724E61 /* BadgeBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgeBackground.swift; sourceTree = "<group>"; };
 		736EF5332BD8A93A00724E61 /* BadgeEarnedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgeEarnedView.swift; sourceTree = "<group>"; };
@@ -61,7 +89,14 @@
 		736EF53D2BD8A93A00724E61 /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		736EF54B2BD8ABAA00724E61 /* Spot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spot.swift; sourceTree = "<group>"; };
 		736EF54D2BD8B98C00724E61 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		73C065042BD8F58700E635B2 /* Spot1.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; name = Spot1.rcproject; path = ../../../Downloads/Spot1.rcproject; sourceTree = "<group>"; };
+=======
+		9B88833A2BD8E476002C89E2 /* MainTabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarItem.swift; sourceTree = "<group>"; };
+		9B88833C2BD8E4EB002C89E2 /* MainTabBarContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarContainerView.swift; sourceTree = "<group>"; };
+		9B88833E2BD8E50C002C89E2 /* MainTabBarItemsPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarItemsPreferenceKey.swift; sourceTree = "<group>"; };
+		9B8883402BD8E555002C89E2 /* MainFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFeedView.swift; sourceTree = "<group>"; };
+>>>>>>> main
 		A133441C2BD8924A00A01D18 /* oxxopared.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = oxxopared.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A133441F2BD8924A00A01D18 /* oxxoparedApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oxxoparedApp.swift; sourceTree = "<group>"; };
 		A13344212BD8924A00A01D18 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -72,6 +107,15 @@
 		A13344362BD8924C00A01D18 /* oxxoparedUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = oxxoparedUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A133443A2BD8924C00A01D18 /* oxxoparedUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oxxoparedUITests.swift; sourceTree = "<group>"; };
 		A133443C2BD8924C00A01D18 /* oxxoparedUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oxxoparedUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A17A00022BD8C45300FBC66D /* PasswordReset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordReset.swift; sourceTree = "<group>"; };
+		A17A00032BD8C45300FBC66D /* RegistrationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		A17A00042BD8C45300FBC66D /* AuthHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthHeaderView.swift; sourceTree = "<group>"; };
+		A17A00052BD8C45300FBC66D /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		A17A00062BD8C45300FBC66D /* Onboarding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
+		A17A00072BD8C45300FBC66D /* CustomInputField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomInputField.swift; sourceTree = "<group>"; };
+		A17A00082BD8C45300FBC66D /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		A17A00092BD8C45300FBC66D /* TermsAndConditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsAndConditions.swift; sourceTree = "<group>"; };
+		A1FF58C02BD8D0FC00411D8D /* NewPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +143,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		06CAFF4F2BD8C9890014679A /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				06CAFF502BD8C9E20014679A /* Feed.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
 		736EF5382BD8A93A00724E61 /* Badges */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +188,8 @@
 			isa = PBXGroup;
 			children = (
 				736EF54B2BD8ABAA00724E61 /* Spot.swift */,
+				06CAFF522BD8CA2E0014679A /* SpotView.swift */,
+				06CAFF542BD8CC690014679A /* SpotManager.swift */,
 			);
 			path = Spot;
 			sourceTree = "<group>";
@@ -163,8 +217,13 @@
 		A133441E2BD8924A00A01D18 /* oxxopared */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
 				73C065042BD8F58700E635B2 /* Spot1.rcproject */,
 				73019AA72BD8D1FD00B812C9 /* ARview.swift */,
+=======
+				06CAFF4F2BD8C9890014679A /* Feed */,
+				A17A00012BD8C45300FBC66D /* AuthAndOnboarding */,
+>>>>>>> main
 				736EF54A2BD8AB9B00724E61 /* Spot */,
 				736EF53E2BD8A93A00724E61 /* Profile */,
 				A133441F2BD8924A00A01D18 /* oxxoparedApp.swift */,
@@ -172,6 +231,10 @@
 				A13344232BD8924C00A01D18 /* Assets.xcassets */,
 				A13344252BD8924C00A01D18 /* Preview Content */,
 				736EF54D2BD8B98C00724E61 /* Utils.swift */,
+				9B88833A2BD8E476002C89E2 /* MainTabBarItem.swift */,
+				9B88833C2BD8E4EB002C89E2 /* MainTabBarContainerView.swift */,
+				9B88833E2BD8E50C002C89E2 /* MainTabBarItemsPreferenceKey.swift */,
+				9B8883402BD8E555002C89E2 /* MainFeedView.swift */,
 			);
 			path = oxxopared;
 			sourceTree = "<group>";
@@ -199,6 +262,22 @@
 				A133443C2BD8924C00A01D18 /* oxxoparedUITestsLaunchTests.swift */,
 			);
 			path = oxxoparedUITests;
+			sourceTree = "<group>";
+		};
+		A17A00012BD8C45300FBC66D /* AuthAndOnboarding */ = {
+			isa = PBXGroup;
+			children = (
+				A17A00022BD8C45300FBC66D /* PasswordReset.swift */,
+				A17A00032BD8C45300FBC66D /* RegistrationView.swift */,
+				A17A00042BD8C45300FBC66D /* AuthHeaderView.swift */,
+				A17A00052BD8C45300FBC66D /* LoginView.swift */,
+				A17A00062BD8C45300FBC66D /* Onboarding.swift */,
+				A17A00072BD8C45300FBC66D /* CustomInputField.swift */,
+				A17A00082BD8C45300FBC66D /* LocationManager.swift */,
+				A17A00092BD8C45300FBC66D /* TermsAndConditions.swift */,
+				A1FF58C02BD8D0FC00411D8D /* NewPostView.swift */,
+			);
+			path = AuthAndOnboarding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -331,20 +410,39 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A17A000F2BD8C45300FBC66D /* CustomInputField.swift in Sources */,
 				736EF5442BD8A93A00724E61 /* HexagonParameters.swift in Sources */,
+				06CAFF532BD8CA2E0014679A /* SpotView.swift in Sources */,
+				9B88833D2BD8E4EB002C89E2 /* MainTabBarContainerView.swift in Sources */,
 				736EF5492BD8A93A00724E61 /* ProfileView.swift in Sources */,
 				736EF5482BD8A93A00724E61 /* Profile.swift in Sources */,
+				06CAFF552BD8CC690014679A /* SpotManager.swift in Sources */,
 				736EF54E2BD8B98C00724E61 /* Utils.swift in Sources */,
 				736EF5432BD8A93A00724E61 /* BadgeSymbol.swift in Sources */,
+				9B8883412BD8E555002C89E2 /* MainFeedView.swift in Sources */,
 				736EF54C2BD8ABAA00724E61 /* Spot.swift in Sources */,
+				A17A000E2BD8C45300FBC66D /* Onboarding.swift in Sources */,
 				736EF5452BD8A93A00724E61 /* RotatedBadgeSymbol.swift in Sources */,
+<<<<<<< HEAD
 				73019AA82BD8D1FD00B812C9 /* ARview.swift in Sources */,
+=======
+				A17A000B2BD8C45300FBC66D /* RegistrationView.swift in Sources */,
+>>>>>>> main
 				A13344222BD8924A00A01D18 /* ContentView.swift in Sources */,
 				736EF53F2BD8A93A00724E61 /* Badge.swift in Sources */,
 				73C065052BD8F58700E635B2 /* Spot1.rcproject in Sources */,
 				736EF5412BD8A93A00724E61 /* BadgeEarnedView.swift in Sources */,
+				A17A00112BD8C45300FBC66D /* TermsAndConditions.swift in Sources */,
 				A13344202BD8924A00A01D18 /* oxxoparedApp.swift in Sources */,
+				A17A000D2BD8C45300FBC66D /* LoginView.swift in Sources */,
+				9B88833F2BD8E50C002C89E2 /* MainTabBarItemsPreferenceKey.swift in Sources */,
+				A17A000C2BD8C45300FBC66D /* AuthHeaderView.swift in Sources */,
+				A17A000A2BD8C45300FBC66D /* PasswordReset.swift in Sources */,
+				A1FF58C12BD8D0FC00411D8D /* NewPostView.swift in Sources */,
+				A17A00102BD8C45300FBC66D /* LocationManager.swift in Sources */,
 				736EF5402BD8A93A00724E61 /* BadgeBackground.swift in Sources */,
+				9B88833B2BD8E476002C89E2 /* MainTabBarItem.swift in Sources */,
+				06CAFF512BD8C9E20014679A /* Feed.swift in Sources */,
 				736EF5462BD8A93A00724E61 /* BadgesView.swift in Sources */,
 				736EF5422BD8A93A00724E61 /* BadgeProtocol.swift in Sources */,
 			);
