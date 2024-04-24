@@ -8,14 +8,15 @@
 import Foundation
 import SwiftUI
 
-struct Spot {
+struct Spot : Identifiable {
+    let id = UUID()
     var title: String
     var image: Image?
     var text: String
     var category: String // oportunidades, servicios, artículos de segunda mano, cosas perdidas, medio ambiente
 }
 
-extension Spot {
+extension Spot{
     
     static var spot1: Spot {
         Spot(
@@ -43,4 +44,13 @@ extension Spot {
             category: "Servicios"
         )
     }
+    
+    static var spot4: Spot {
+            Spot(
+                title: "Se ofrecen servicios de limpieza",
+                image: nil,
+                text: "Descubre la eficiencia de nuestros servicios de limpieza, ideales para cualquier espacio. Contamos con un equipo experto y tecnología de punta para garantizar un ambiente pulcro y agradable. ¡Contáctanos al 4444444 y transforma tu entorno!",
+                category: "Servicios"
+            )
+        }
 }

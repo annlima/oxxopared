@@ -8,14 +8,16 @@
 import SwiftUI
 
 struct Feed: View {
-    @State var spots: [Spot] = [Spot.spot1,Spot.spot2,Spot.spot3]
+    @EnvironmentObject var spotStore: SpotStore
+    @State var spots: [Spot] = [Spot.spot1,Spot.spot2,Spot.spot3, Spot.spot4]
+    
     var body: some View {
         NavigationStack
         {
             ZStack
             {
                 Ellipse()
-                    .fill(.redMain)
+                    .fill(Color.redMain)
                     .frame(width: 600, height: 300)
  
                     .padding(.top, -300) // Posiciona la elipse hacia arriba para que solo se vea la mitad
@@ -31,8 +33,8 @@ struct Feed: View {
             
             
             ScrollView() {
-                ForEach(0 ..< spots.count, id: \.self) { value in
-                    SpotView(spot: spots[value])
+                ForEach(spotStore.spots) { spot in
+                    SpotView(spot: spot)
                         .padding()
                 }
             }
@@ -45,4 +47,5 @@ struct Feed: View {
 
 #Preview {
     Feed()
+        .environmentObject(SpotStore())
 }

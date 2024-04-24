@@ -20,6 +20,9 @@ struct PostData {
 
 struct NewPostView: View {
 
+    @EnvironmentObject var spotStore: SpotStore // EnvironmentObject for the spots
+
+    
     @State private var image: Data?
     @State private var item: PhotosPickerItem?
     @State var titleText: String = ""
@@ -123,12 +126,24 @@ struct NewPostView: View {
 
                                     let prediction = try model.prediction(image: pixelBuffer)
                                     // Usa el resultado de la predicción según sea necesario
+                            
                                 } catch {
                                     print("Error al hacer la predicción: \(error)")
                                 }
                             } else {
                                 print("Error: No se pudo convertir la imagen a pixelBuffer")
                             }
+                            
+                            
+                            let newImage: Image?
+                                if let selectedImage = selectedImage {
+                                    newImage = Image(uiImage: selectedImage)
+                                } else {
+                                    newImage = nil  // Keep newImage as nil if there's no selected image
+                                }
+                            spotStore.addSpot(title: titleText, image: newImage, text: caption, category: selectedCategory)
+                                        dismiss()
+                           
                         } else {
                             // Provide user feedback about the error
                             print("Error: No image selected")
