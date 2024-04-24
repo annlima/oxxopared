@@ -32,10 +32,9 @@ struct ProfileView: View {
                 ZStack(alignment: .topTrailing) {
                     
                     
-                    
                     VStack{
                         
-                        if let myProfile{
+                       /* if let myProfile{
                             ReusableProfileContent(user: myProfile)
                                 .refreshable {
                                     self.myProfile = nil
@@ -43,7 +42,7 @@ struct ProfileView: View {
                                 }
                         }else{
                             ProgressView()
-                        }
+                        }*/
                         
                         // Profile Information
                         VStack (alignment: .center, spacing: 10) {
