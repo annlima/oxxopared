@@ -16,6 +16,8 @@ struct ContentView: View {
             Text("Hello, world!")
         }
         .padding()
+        @State var spots: [Spot] = [Spot.spot1,Spot.spot2,Spot.spot3]
+        NewPostView(spots: $spots)
     }
 }
 
