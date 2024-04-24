@@ -8,7 +8,7 @@
 import SwiftUI
 import FirebaseFirestoreSwift
 
-struct User: Identifiable, Codable {
+/*struct User: Identifiable, Codable {
     @DocumentID var id: String?
     var userNombreCompleto: String
     var userEmail: String
@@ -26,4 +26,4 @@ struct User: Identifiable, Codable {
         case userUID
         case userProfileURL
     }
-}
+}*/

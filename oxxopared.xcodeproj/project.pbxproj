@@ -32,12 +32,13 @@
 		73F339912BD98BA20097281E /* ReusableProfileContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F339902BD98BA20097281E /* ReusableProfileContent.swift */; };
 		73F339942BD98C160097281E /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 73F339932BD98C160097281E /* SDWebImageSwiftUI */; };
 		73F339962BD98C6C0097281E /* ReusableSpotsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F339952BD98C6C0097281E /* ReusableSpotsView.swift */; };
+		73F3399D2BD9C0BC0097281E /* Spots.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 73F3399C2BD9C0BC0097281E /* Spots.rcproject */; };
+		73F3399F2BD9C2D60097281E /* AuthViewModelswift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F3399E2BD9C2D60097281E /* AuthViewModelswift.swift */; };
 		9B88833B2BD8E476002C89E2 /* MainTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B88833A2BD8E476002C89E2 /* MainTabBarItem.swift */; };
 		9B88833D2BD8E4EB002C89E2 /* MainTabBarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B88833C2BD8E4EB002C89E2 /* MainTabBarContainerView.swift */; };
 		9B88833F2BD8E50C002C89E2 /* MainTabBarItemsPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B88833E2BD8E50C002C89E2 /* MainTabBarItemsPreferenceKey.swift */; };
 		9B8883412BD8E555002C89E2 /* MainFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8883402BD8E555002C89E2 /* MainFeedView.swift */; };
 		9B8883452BD910AA002C89E2 /* SpotsARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8883442BD910AA002C89E2 /* SpotsARView.swift */; };
-		9B8883472BD91156002C89E2 /* Spots.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 9B8883462BD91156002C89E2 /* Spots.rcproject */; };
 		9B88834B2BD97898002C89E2 /* SpotStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B88834A2BD97898002C89E2 /* SpotStore.swift */; };
 		A11CA7552BD95DA500A5AFD1 /* NewPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11CA7542BD95DA500A5AFD1 /* NewPostView.swift */; };
 		A11CA7572BD95E1200A5AFD1 /* TaggerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11CA7562BD95E1200A5AFD1 /* TaggerView.swift */; };
@@ -112,12 +113,13 @@
 		73F3398E2BD984BD0097281E /* capaCarga.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = capaCarga.swift; sourceTree = "<group>"; };
 		73F339902BD98BA20097281E /* ReusableProfileContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableProfileContent.swift; sourceTree = "<group>"; };
 		73F339952BD98C6C0097281E /* ReusableSpotsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableSpotsView.swift; sourceTree = "<group>"; };
+		73F3399C2BD9C0BC0097281E /* Spots.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Spots.rcproject; sourceTree = "<group>"; };
+		73F3399E2BD9C2D60097281E /* AuthViewModelswift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModelswift.swift; sourceTree = "<group>"; };
 		9B88833A2BD8E476002C89E2 /* MainTabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarItem.swift; sourceTree = "<group>"; };
 		9B88833C2BD8E4EB002C89E2 /* MainTabBarContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarContainerView.swift; sourceTree = "<group>"; };
 		9B88833E2BD8E50C002C89E2 /* MainTabBarItemsPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarItemsPreferenceKey.swift; sourceTree = "<group>"; };
 		9B8883402BD8E555002C89E2 /* MainFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFeedView.swift; sourceTree = "<group>"; };
 		9B8883442BD910AA002C89E2 /* SpotsARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotsARView.swift; sourceTree = "<group>"; };
-		9B8883462BD91156002C89E2 /* Spots.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Spots.rcproject; sourceTree = "<group>"; };
 		9B88834A2BD97898002C89E2 /* SpotStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotStore.swift; sourceTree = "<group>"; };
 		A11CA7542BD95DA500A5AFD1 /* NewPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostView.swift; sourceTree = "<group>"; };
 		A11CA7562BD95E1200A5AFD1 /* TaggerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaggerView.swift; sourceTree = "<group>"; };
@@ -231,7 +233,7 @@
 		736EF54A2BD8AB9B00724E61 /* Spot */ = {
 			isa = PBXGroup;
 			children = (
-				9B8883462BD91156002C89E2 /* Spots.rcproject */,
+				73F3399C2BD9C0BC0097281E /* Spots.rcproject */,
 				736EF54B2BD8ABAA00724E61 /* Spot.swift */,
 				73F339952BD98C6C0097281E /* ReusableSpotsView.swift */,
 				06CAFF522BD8CA2E0014679A /* SpotView.swift */,
@@ -340,6 +342,7 @@
 			children = (
 				A17A00022BD8C45300FBC66D /* PasswordReset.swift */,
 				A17A00032BD8C45300FBC66D /* RegistrationView.swift */,
+				73F3399E2BD9C2D60097281E /* AuthViewModelswift.swift */,
 				A17A00042BD8C45300FBC66D /* AuthHeaderView.swift */,
 				A17A00052BD8C45300FBC66D /* LoginView.swift */,
 				73F3398E2BD984BD0097281E /* capaCarga.swift */,
@@ -514,11 +517,13 @@
 				736EF54C2BD8ABAA00724E61 /* Spot.swift in Sources */,
 				A17A000E2BD8C45300FBC66D /* Onboarding.swift in Sources */,
 				73F3398B2BD982FB0097281E /* ExtensionView.swift in Sources */,
+				73F3399F2BD9C2D60097281E /* AuthViewModelswift.swift in Sources */,
 				736EF5452BD8A93A00724E61 /* RotatedBadgeSymbol.swift in Sources */,
 				A17A000B2BD8C45300FBC66D /* RegistrationView.swift in Sources */,
 				A13344222BD8924A00A01D18 /* ContentView.swift in Sources */,
 				736EF53F2BD8A93A00724E61 /* Badge.swift in Sources */,
 				736EF5412BD8A93A00724E61 /* BadgeEarnedView.swift in Sources */,
+				73F3399D2BD9C0BC0097281E /* Spots.rcproject in Sources */,
 				A17A00112BD8C45300FBC66D /* TermsAndConditions.swift in Sources */,
 				A13344202BD8924A00A01D18 /* oxxoparedApp.swift in Sources */,
 				9B8883452BD910AA002C89E2 /* SpotsARView.swift in Sources */,
@@ -536,7 +541,6 @@
 				A11CA7552BD95DA500A5AFD1 /* NewPostView.swift in Sources */,
 				73F339962BD98C6C0097281E /* ReusableSpotsView.swift in Sources */,
 				06CAFF572BD8FE300014679A /* IllegalRelated.mlmodel in Sources */,
-				9B8883472BD91156002C89E2 /* Spots.rcproject in Sources */,
 				73F339862BD977B00097281E /* User.swift in Sources */,
 				06CAFF512BD8C9E20014679A /* Feed.swift in Sources */,
 				736EF5462BD8A93A00724E61 /* BadgesView.swift in Sources */,

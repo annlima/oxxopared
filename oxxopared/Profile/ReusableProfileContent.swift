@@ -8,6 +8,7 @@
 import SwiftUI
 import SDWebImageSwiftUI
 
+/*
 struct ReusableProfileContent: View {
     @State private var fetchedPosts: [Spot] = []
     var user: User
@@ -54,3 +55,4 @@ struct ReusableProfileContent: View {
         }
     }
 }
+*/

@@ -24,6 +24,8 @@ struct LoginView: View {
     @AppStorage ("user_UID") var userUID: String = ""
     @AppStorage("user_profile_url") var profileURL: URL?
     
+    @EnvironmentObject private var authModel: AuthViewModel
+    
     var body: some View {
         NavigationStack{
             VStack {

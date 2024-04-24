@@ -184,13 +184,6 @@ struct ProfileView: View {
         .ignoresSafeArea()
     }
     
-    func fetchUserData()async{
-            guard let userUID = Auth.auth().currentUser?.uid else{return}
-            guard let user = try? await Firestore.firestore().collection("User").document(userUID).getDocument(as: User.self) else{return}
-            await MainActor.run(body: {
-                myProfile = user
-            })
-        }
     
     func logoutUser() {
         do {
