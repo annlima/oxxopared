@@ -4,6 +4,7 @@
 //  Created by Andrea Lima Blanca on 25/02/24.
 //
 import SwiftUI
+import FirebaseAuth
 
 struct iOSCheckboxToggleStyle: View {
     @Binding var checked: Bool
@@ -24,6 +25,7 @@ struct RegistrationView: View {
     @State private var age = ""
     @State private var password = ""
     @State private var checked = false
+    @State private var errorMessage = "Error al registrarse"
     @Environment(\.presentationMode) var presentationMode
     @State private var shouldNavigate = false
     var body: some View {
@@ -52,6 +54,7 @@ struct RegistrationView: View {
                                      placeholderText: "Contraseña",
                                      isSecureField: true,
                                      text: $password)
+                    
                     HStack {
                         iOSCheckboxToggleStyle(checked: $checked)
                         NavigationLink(destination: TermsAndConditions()) {
@@ -66,7 +69,8 @@ struct RegistrationView: View {
                 .padding(.top, -40)
                 NavigationLink(destination: Onboarding(), isActive: $shouldNavigate) { EmptyView() }
                 Button {
-                    self.shouldNavigate = true
+                    register()
+                    //self.shouldNavigate = true
                 } label: {
                     Text("Regístrate")
                         .font(.headline)
@@ -93,6 +97,21 @@ struct RegistrationView: View {
                 .padding(.bottom)
             }
             .ignoresSafeArea()
+        }
+    }
+    
+    func register() {
+
+        // Firebase registration
+        Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+            if let error = error {
+                self.errorMessage = error.localizedDescription
+                return
+            }
+
+            // Registration successful, handle next steps
+            print("User registered successfully")
+            self.shouldNavigate = true
         }
     }
 }

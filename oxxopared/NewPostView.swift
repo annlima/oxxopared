@@ -8,6 +8,7 @@
 import SwiftUI
 import PhotosUI
 import CoreML
+import Vision
 
 struct PostData {
     var profilePicture: Image
@@ -31,6 +32,8 @@ struct NewPostView: View {
     @State private var selectedImage: UIImage?
     var categories = ["Oportunidades", "Servicios", "Artículos de segunda mano", "Cosas perdidas", "Medio ambiente"]
     @State private var selectedCategory = "Oportunidades"
+    let modelURL = Bundle.main.url(forResource: "IllegalRelated", withExtension: "mlmodelc")!
+    @State var validImage = false;
 
     var screenWidth: CGFloat {
         UIScreen.main.bounds.width

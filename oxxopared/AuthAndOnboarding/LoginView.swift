@@ -6,21 +6,34 @@
 //
 
 import SwiftUI
+import FirebaseAuth
+import Firebase
+import FirebaseFirestore
+import FirebaseStorage
 
 struct LoginView: View {
-    @State private var phonenumber = ""
+    @State private var email = ""
     @State private var password = ""
+    @State private var errorMessage = "Error al iniciar sesión"
     @State private var shouldNavigate = false
+    @State var isLoading: Bool = false
+    @State var showError: Bool = false
+    
+    @AppStorage ("log_status") var logstatus: Bool = false
+    @AppStorage ("user_name") var userNameStored: String = ""
+    @AppStorage ("user_UID") var userUID: String = ""
+    @AppStorage("user_profile_url") var profileURL: URL?
+    
     var body: some View {
-        NavigationView{
+        NavigationStack{
             VStack {
                 AuthHeaderView(title1: "Hola,", title2: "bienvenido de nuevo.")
                 
                 VStack(spacing: 40) {
-                    CustomInputField(imageName: "phone",
-                                     placeholderText: "Número de teléfono",
+                    CustomInputField(imageName: "envelope",
+                                     placeholderText: "Correo electrónico",
                                      isSecureField: false,
-                                     text: $phonenumber)
+                                     text: $email)
                     CustomInputField(imageName: "lock",
                                      placeholderText: "Contraseña",
                                      isSecureField: true, // Aquí se necesita para el campo de contraseña
@@ -46,7 +59,7 @@ struct LoginView: View {
                 NavigationLink(destination: MainFeedView(), isActive: $shouldNavigate) { EmptyView() }
                 Button {
                     print("Inicia sesión")
-                    self.shouldNavigate = true
+                    loginUser()
                 } label: {
                     Text("Inicia sesión")
                         .font(.headline)
@@ -74,13 +87,67 @@ struct LoginView: View {
                     }
                 }
                 .padding(.bottom, 32)
-                .foregroundColor(Color("RedMain") .opacity(0.9))
+                .foregroundColor(Color.redMain.opacity(0.9))
+                
+                NavigationLink(
+                    destination: Onboarding(),
+                    isActive: $shouldNavigate,
+                    label: {
+                        EmptyView()
+                    })
+                    .hidden()
             }
+            .overlay(content: {
+                capaCarga(show:$isLoading)
+            })
+            .alert(errorMessage, isPresented: $showError, actions:{})
             .navigationBarBackButtonHidden(true)
             .ignoresSafeArea()
         }
         .navigationBarBackButtonHidden(true)
     }
+    
+    func loginUser(){
+            isLoading=true
+            closeKeyboard()
+            Task{
+                do{
+                    try await Auth.auth().signIn(withEmail:email, password: password)
+                    print("User Found")
+                    try await fetchUser()
+                }catch{
+                    await setError(error)
+                }
+            }
+        }
+    
+    func fetchUser()async throws{
+            guard let userID = Auth.auth().currentUser?.uid else{return}
+            let user = try await Firestore.firestore().collection("User").document(userID).getDocument(as: User.self)
+            await MainActor.run(body:{
+                userUID = userID
+                userNameStored = user.userNombreCompleto
+                logstatus=true
+                shouldNavigate = true
+            })
+        }
+        func resetPassword(){
+            Task{
+                do{
+                    try await Auth.auth().sendPasswordReset(withEmail: email)
+                    print("Link Sent")
+                }catch{
+                    await setError(error)
+                }
+            }
+        }
+        func setError(_ error: Error) async {
+            await MainActor.run(body:{
+                errorMessage = error.localizedDescription
+                showError.toggle()
+                isLoading=false
+            })
+        }
 }
 
 struct LoginView_Previews: PreviewProvider {
