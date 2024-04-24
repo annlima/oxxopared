@@ -58,7 +58,8 @@ struct ProfileView: View {
                         }
                         .ignoresSafeArea()
                         .frame(maxWidth: .infinity)
-                        .background(Color.redMain)
+                        .background(Color.redMain.opacity(0.9))
+                        
                         
                         
                         Spacer()
