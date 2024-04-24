@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MainFeedView: View {
-    @State var selectedTab: MainTabBarItem = .announcements  // Using MainTabBarItem now
+    @State var selectedTab: MainTabBarItem = .announcements 
 
     var body: some View {
         ZStack {
@@ -24,7 +24,7 @@ struct MainFeedView: View {
                             SpotsARView()
                                 .tag(MainTabBarItem.ar)
                                 .mainTabBarItem(tab: .ar, selection: $selectedTab)
-                            
+                           
                             ProfileView()
                                 .tag(MainTabBarItem.profile)
                                 .mainTabBarItem(tab: .profile, selection: $selectedTab)

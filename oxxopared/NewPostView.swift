@@ -34,6 +34,8 @@ struct NewPostView: View {
     @State private var selectedCategory = "Oportunidades"
     let modelURL = Bundle.main.url(forResource: "IllegalRelated", withExtension: "mlmodelc")!
     @State var validImage = false;
+    
+    @State private var navigationActive = false
 
     var screenWidth: CGFloat {
         UIScreen.main.bounds.width
@@ -144,8 +146,18 @@ struct NewPostView: View {
                                 } else {
                                     newImage = nil  // Keep newImage as nil if there's no selected image
                                 }
-                            spotStore.addSpot(title: titleText, image: newImage, text: caption, category: selectedCategory)
-                                        dismiss()
+                            
+                            spotStore.addSpot(title: titleText, image: newImage, text: caption, category: selectedCategory) { success in
+                                    if success {
+                                            DispatchQueue.main.async {
+                                                NavigationLink("", destination: MainFeedView(), isActive: $navigationActive)
+                                                dismiss() // Dismiss the current view
+                                                // Navigate to MainFeedView
+                                            }
+                                        } else {
+                                            print("Failed to add the spot.")
+                                        }
+                                    }
                            
                         } else {
                             // Provide user feedback about the error
@@ -254,5 +266,6 @@ struct NewPostView_Previews: PreviewProvider {
 
     static var previews: some View {
         NewPostView()
+            .environmentObject(SpotStore())
     }
 }

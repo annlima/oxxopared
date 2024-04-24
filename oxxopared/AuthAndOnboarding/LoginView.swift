@@ -56,7 +56,7 @@ struct LoginView: View {
                             .padding(.trailing, 24)
                     }
                 }
-                NavigationLink(destination: MainFeedView(), isActive: $shouldNavigate) { EmptyView() }
+                NavigationLink(destination: MainFeedView().environmentObject(SpotStore()), isActive: $shouldNavigate) { EmptyView() }
                 Button {
                     print("Inicia sesión")
                     loginUser()

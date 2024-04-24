@@ -11,9 +11,9 @@ import SwiftUI
 class SpotStore: ObservableObject {
     @Published var spots: [Spot] = [Spot.spot1, Spot.spot2, Spot.spot3, Spot.spot4]
 
-    func addSpot(title: String, image: Image?, text: String, category: String) {
+    func addSpot(title: String, image: Image?, text: String, category: String, completion: @escaping (Bool) -> Void) {
         let newSpot = Spot(title: title, image: image, text: text, category: category)
-        spots.append(newSpot)
     }
+
 }
 
