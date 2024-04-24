@@ -8,6 +8,7 @@
 import SwiftUI
 import PhotosUI
 import CoreML
+import Vision
 
 struct PostData {
     var profilePicture: Image
@@ -28,6 +29,8 @@ struct NewPostView: View {
     @State private var selectedImage: UIImage?
     var categories = ["Oportunidades", "Servicios", "Artículos de segunda mano", "Cosas perdidas", "Medio ambiente"]
     @State private var selectedCategory = "Oportunidades"
+    let modelURL = Bundle.main.url(forResource: "IllegalRelated", withExtension: "mlmodelc")!
+    @State var validImage = false;
 
     var screenWidth: CGFloat {
         UIScreen.main.bounds.width
@@ -114,26 +117,32 @@ struct NewPostView: View {
                     }
 
                     Button("Publicar") {
-                        if let uiImage = selectedImage {
-                            if let pixelBuffer = pixelBufferConv(from:uiImage) {
-                                // Realiza la predicción con el pixelBuffer
-                                do {
-                                    let config = MLModelConfiguration()
-                                    let model = try IllegalRelated(configuration: config)
+                            if let uiImage = selectedImage {
+                                if let pixelBuffer = pixelBufferConv(from:uiImage) {
+                                    // Realiza la predicción con el pixelBuffer
+                                    do {
+                                        let config = MLModelConfiguration()
+                                        let model = try IllegalRelated(configuration: config)
 
-                                    let prediction = try model.prediction(image: pixelBuffer)
-                                    // Usa el resultado de la predicción según sea necesario
-                                } catch {
-                                    print("Error al hacer la predicción: \(error)")
-                                }
-                            } else {
-                                print("Error: No se pudo convertir la imagen a pixelBuffer")
+                                        let prediction = try model.prediction(image: pixelBuffer)
+                                        print(prediction.target)
+                                        if prediction.target=="Legal"
+                                            {
+                                                            
+                                                validImage=true;
+                                            }
+                                            
+                                    } catch {
+                                        print("Error al hacer la predicción: \(error)")
+                                    }
+                                    } else {
+                                        print("Error: No se pudo convertir la imagen a pixelBuffer")
+                                    }
+                                    } else {
+                                        // Provide user feedback about the error
+                                        print("Error: No image selected")
+                                    }
                             }
-                        } else {
-                            // Provide user feedback about the error
-                            print("Error: No image selected")
-                        }
-                    }
                     .padding(.vertical, 12)
                     .padding(.horizontal, 30)
                     .font(.headline)
