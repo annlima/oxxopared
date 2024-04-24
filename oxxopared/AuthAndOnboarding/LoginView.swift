@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LoginView: View {
-    @State private var email = ""
+    @State private var phonenumber = ""
     @State private var password = ""
     @State private var shouldNavigate = false
     var body: some View {
@@ -17,10 +17,10 @@ struct LoginView: View {
                 AuthHeaderView(title1: "Hola,", title2: "Bienvenido de nuevo.")
                 
                 VStack(spacing: 40) {
-                    CustomInputField(imageName: "envelope",
-                                     placeholderText: "Correo electrónico",
+                    CustomInputField(imageName: "phone",
+                                     placeholderText: "Número de teléfono",
                                      isSecureField: false,
-                                     text: $email)
+                                     text: $phonenumber)
                     CustomInputField(imageName: "lock",
                                      placeholderText: "Contraseña",
                                      isSecureField: true, // Aquí se necesita para el campo de contraseña

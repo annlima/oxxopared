@@ -1,12 +1,5 @@
 //
 //  AuthHeaderView.swift
-//  oxxopared
-//
-//  Created by Andrea Lima Blanca on 23/04/24.
-//
-
-//
-//  AuthHeaderView.swift
 //  echo
 //
 //  Created by Andrea Lima Blanca on 25/02/24.

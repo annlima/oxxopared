@@ -1,12 +1,5 @@
 //
 //  PasswordReset.swift
-//  oxxopared
-//
-//  Created by Andrea Lima Blanca on 23/04/24.
-//
-
-//
-//  PasswordReset.swift
 //  echo
 //
 //  Created by Andrea Lima Blanca on 26/02/24.
@@ -30,7 +23,7 @@ struct PasswordResetView: View {
             .padding(.horizontal, 32)
             .padding(.top, 44)
             
-            Text("Ingresa tu correo electrónico y te enviaremos instrucciones para restablecer tu contraseña.")
+            Text("Ingresa tu número telefónico y te enviaremos instrucciones para restablecer tu contraseña.")
                 .foregroundColor(Color("ColorPrincipal"))
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 30)
