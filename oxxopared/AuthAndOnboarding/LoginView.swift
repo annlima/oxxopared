@@ -6,10 +6,13 @@
 //
 
 import SwiftUI
+import FirebaseAuth
+import Firebase
 
 struct LoginView: View {
-    @State private var phonenumber = ""
+    @State private var email = ""
     @State private var password = ""
+    @State private var errorMessage = "Error al iniciar sesión"
     @State private var shouldNavigate = false
     var body: some View {
         NavigationView{
@@ -17,10 +20,10 @@ struct LoginView: View {
                 AuthHeaderView(title1: "Hola,", title2: "bienvenido de nuevo.")
                 
                 VStack(spacing: 40) {
-                    CustomInputField(imageName: "phone",
-                                     placeholderText: "Número de teléfono",
+                    CustomInputField(imageName: "envelope",
+                                     placeholderText: "Correo electrónico",
                                      isSecureField: false,
-                                     text: $phonenumber)
+                                     text: $email)
                     CustomInputField(imageName: "lock",
                                      placeholderText: "Contraseña",
                                      isSecureField: true, // Aquí se necesita para el campo de contraseña
@@ -46,7 +49,7 @@ struct LoginView: View {
                 NavigationLink(destination: MainFeedView(), isActive: $shouldNavigate) { EmptyView() }
                 Button {
                     print("Inicia sesión")
-                    self.shouldNavigate = true
+                    login()
                 } label: {
                     Text("Inicia sesión")
                         .font(.headline)
@@ -74,12 +77,35 @@ struct LoginView: View {
                     }
                 }
                 .padding(.bottom, 32)
-                .foregroundColor(Color("RedMain") .opacity(0.9))
+                .foregroundColor(Color.redMain.opacity(0.9))
+                
+                NavigationLink(
+                    destination: Onboarding(),
+                    isActive: $shouldNavigate,
+                    label: {
+                        EmptyView()
+                    })
+                    .hidden()
             }
             .navigationBarBackButtonHidden(true)
             .ignoresSafeArea()
         }
         .navigationBarBackButtonHidden(true)
+    }
+    
+    func login() {
+        Auth.auth().signIn(withEmail: self.email, password: self.password) { authResult, error in
+            if let error = error {
+                self.errorMessage = error.localizedDescription
+                return
+            }else if let authResult = authResult {
+                // User registered successfully
+                let user = authResult.user
+                print("User \(user.uid) registered successfully")
+                self.shouldNavigate = true
+                // You can perform any necessary actions here, such as navigating to the next screen
+            }
+        }
     }
 }
 

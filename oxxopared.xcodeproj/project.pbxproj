@@ -24,6 +24,8 @@
 		736EF5492BD8A93A00724E61 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736EF53D2BD8A93A00724E61 /* ProfileView.swift */; };
 		736EF54C2BD8ABAA00724E61 /* Spot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736EF54B2BD8ABAA00724E61 /* Spot.swift */; };
 		736EF54E2BD8B98C00724E61 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736EF54D2BD8B98C00724E61 /* Utils.swift */; };
+		73F339822BD9680B0097281E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 73F339812BD9680B0097281E /* GoogleService-Info.plist */; };
+		73F339862BD977B00097281E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F339852BD977B00097281E /* User.swift */; };
 		9B88833B2BD8E476002C89E2 /* MainTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B88833A2BD8E476002C89E2 /* MainTabBarItem.swift */; };
 		9B88833D2BD8E4EB002C89E2 /* MainTabBarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B88833C2BD8E4EB002C89E2 /* MainTabBarContainerView.swift */; };
 		9B88833F2BD8E50C002C89E2 /* MainTabBarItemsPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B88833E2BD8E50C002C89E2 /* MainTabBarItemsPreferenceKey.swift */; };
@@ -92,6 +94,9 @@
 		736EF53D2BD8A93A00724E61 /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		736EF54B2BD8ABAA00724E61 /* Spot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spot.swift; sourceTree = "<group>"; };
 		736EF54D2BD8B98C00724E61 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		73F339812BD9680B0097281E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		73F339832BD969D50097281E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		73F339852BD977B00097281E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9B88833A2BD8E476002C89E2 /* MainTabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarItem.swift; sourceTree = "<group>"; };
 		9B88833C2BD8E4EB002C89E2 /* MainTabBarContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarContainerView.swift; sourceTree = "<group>"; };
 		9B88833E2BD8E50C002C89E2 /* MainTabBarItemsPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarItemsPreferenceKey.swift; sourceTree = "<group>"; };
@@ -206,6 +211,14 @@
 			path = Spot;
 			sourceTree = "<group>";
 		};
+		73F339842BD977A70097281E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				73F339852BD977B00097281E /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		A13344132BD8924A00A01D18 = {
 			isa = PBXGroup;
 			children = (
@@ -230,6 +243,8 @@
 		A133441E2BD8924A00A01D18 /* oxxopared */ = {
 			isa = PBXGroup;
 			children = (
+				73F339842BD977A70097281E /* Model */,
+				73F339832BD969D50097281E /* Info.plist */,
 				06CAFF562BD8FE300014679A /* IllegalRelated.mlmodel */,
 				06CAFF4F2BD8C9890014679A /* Feed */,
 				A17A00012BD8C45300FBC66D /* AuthAndOnboarding */,
@@ -408,8 +423,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A13344272BD8924C00A01D18 /* Preview Assets.xcassets in Resources */,
+				73F339822BD9680B0097281E /* GoogleService-Info.plist in Resources */,
 				A13344242BD8924C00A01D18 /* Assets.xcassets in Resources */,
-				06E0A72C2BD96EF300BCCF5C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,6 +481,7 @@
 				A11CA7552BD95DA500A5AFD1 /* NewPostView.swift in Sources */,
 				06CAFF572BD8FE300014679A /* IllegalRelated.mlmodel in Sources */,
 				9B8883472BD91156002C89E2 /* Spots.rcproject in Sources */,
+				73F339862BD977B00097281E /* User.swift in Sources */,
 				06CAFF512BD8C9E20014679A /* Feed.swift in Sources */,
 				736EF5462BD8A93A00724E61 /* BadgesView.swift in Sources */,
 				736EF5422BD8A93A00724E61 /* BadgeProtocol.swift in Sources */,
@@ -632,9 +648,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"oxxopared/Preview Content\"";
-				DEVELOPMENT_TEAM = XX3STCX8J3;
+				DEVELOPMENT_TEAM = SAM2A296M4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = oxxopared/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "La app necesita la cámara";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -665,6 +682,7 @@
 				DEVELOPMENT_TEAM = XX3STCX8J3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = oxxopared/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "La app necesita la cámara";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
