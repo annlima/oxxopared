@@ -65,8 +65,19 @@ struct NewPostView: View {
                 TextField("Agrega un título", text: $titleText)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding(.horizontal)
-                TextField("Agrega una descripción", text: $titleText)
+                HStack
+                {
+                    Text("Agrega una descripción")
+                        .foregroundStyle(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/.opacity(0.3))
+                        .padding(.horizontal)
+                    Spacer()
+                }
+                
+                
+                TextEditor(text: $titleText)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding(.horizontal)
+                    .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/.opacity(0.1))
                     .padding(.horizontal)
                 
 
