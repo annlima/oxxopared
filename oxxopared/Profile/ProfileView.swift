@@ -7,7 +7,6 @@ import FirebaseFirestore
 struct ProfileView: View {
     
     @State private var myProfile: User?
-    @AppStorage("user_profile_url") var profileURL: URL?
     @AppStorage("user_name") var nombreCompleto: String = ""
     @AppStorage("user_UID") var userUID: String = ""
     @AppStorage("log_status") var logstatus: Bool = false
@@ -35,6 +34,16 @@ struct ProfileView: View {
                     
                     
                     VStack{
+                        
+                        if let myProfile{
+                            ReusableProfileContent(user: myProfile)
+                                .refreshable {
+                                    self.myProfile = nil
+                                    await fetchUserData()
+                                }
+                        }else{
+                            ProgressView()
+                        }
                         
                         // Profile Information
                         VStack (alignment: .center, spacing: 10) {

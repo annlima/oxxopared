@@ -6,19 +6,23 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct PasswordResetView: View {
-    @State private var phonenumber = ""
+    @State private var email = ""
+    @State var isLoading: Bool = false
+    @State var showError: Bool = false
+    @State private var errorMessage = "Error al iniciar sesión"
     
     var body: some View {
         VStack {
             AuthHeaderView(title1: "Recuperación de", title2: "contraseña")
             
             VStack(spacing: 40) {
-                CustomInputField(imageName: "phone",
-                                 placeholderText: "Número de teléfono",
+                CustomInputField(imageName: "envelope",
+                                 placeholderText: "correo",
                                  isSecureField: false,
-                                 text: $phonenumber)
+                                 text: $email)
             }
             .padding(.horizontal, 32)
             .padding(.top, 44)
@@ -59,6 +63,25 @@ struct PasswordResetView: View {
         }
         .navigationBarBackButtonHidden(true)
         .ignoresSafeArea()
+    }
+    
+    func resetPassword(){
+        Task{
+            do{
+                try await Auth.auth().sendPasswordReset(withEmail: email)
+                print("Link Sent")
+            }catch{
+                await setError(error)
+            }
+        }
+    }
+    
+    func setError(_ error: Error) async {
+        await MainActor.run(body:{
+            errorMessage = error.localizedDescription
+            showError.toggle()
+            isLoading=false
+        })
     }
 }
 

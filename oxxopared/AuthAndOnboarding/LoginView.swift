@@ -131,16 +131,7 @@ struct LoginView: View {
                 shouldNavigate = true
             })
         }
-        func resetPassword(){
-            Task{
-                do{
-                    try await Auth.auth().sendPasswordReset(withEmail: email)
-                    print("Link Sent")
-                }catch{
-                    await setError(error)
-                }
-            }
-        }
+        
         func setError(_ error: Error) async {
             await MainActor.run(body:{
                 errorMessage = error.localizedDescription
