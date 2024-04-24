@@ -26,9 +26,14 @@
 		736EF5492BD8A93A00724E61 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736EF53D2BD8A93A00724E61 /* ProfileView.swift */; };
 		736EF54C2BD8ABAA00724E61 /* Spot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736EF54B2BD8ABAA00724E61 /* Spot.swift */; };
 		736EF54E2BD8B98C00724E61 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736EF54D2BD8B98C00724E61 /* Utils.swift */; };
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 		73C065052BD8F58700E635B2 /* Spot1.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 73C065042BD8F58700E635B2 /* Spot1.rcproject */; };
 =======
+=======
+		73C065172BD90BC000E635B2 /* SpotsARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C065162BD90BC000E635B2 /* SpotsARView.swift */; };
+		73C065192BD90BE200E635B2 /* Spots.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 73C065182BD90BE200E635B2 /* Spots.rcproject */; };
+>>>>>>> Stashed changes
 		9B88833B2BD8E476002C89E2 /* MainTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B88833A2BD8E476002C89E2 /* MainTabBarItem.swift */; };
 		9B88833D2BD8E4EB002C89E2 /* MainTabBarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B88833C2BD8E4EB002C89E2 /* MainTabBarContainerView.swift */; };
 		9B88833F2BD8E50C002C89E2 /* MainTabBarItemsPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B88833E2BD8E50C002C89E2 /* MainTabBarItemsPreferenceKey.swift */; };
@@ -89,9 +94,14 @@
 		736EF53D2BD8A93A00724E61 /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		736EF54B2BD8ABAA00724E61 /* Spot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spot.swift; sourceTree = "<group>"; };
 		736EF54D2BD8B98C00724E61 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 		73C065042BD8F58700E635B2 /* Spot1.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; name = Spot1.rcproject; path = ../../../Downloads/Spot1.rcproject; sourceTree = "<group>"; };
 =======
+=======
+		73C065162BD90BC000E635B2 /* SpotsARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotsARView.swift; sourceTree = "<group>"; };
+		73C065182BD90BE200E635B2 /* Spots.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Spots.rcproject; sourceTree = "<group>"; };
+>>>>>>> Stashed changes
 		9B88833A2BD8E476002C89E2 /* MainTabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarItem.swift; sourceTree = "<group>"; };
 		9B88833C2BD8E4EB002C89E2 /* MainTabBarContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarContainerView.swift; sourceTree = "<group>"; };
 		9B88833E2BD8E50C002C89E2 /* MainTabBarItemsPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarItemsPreferenceKey.swift; sourceTree = "<group>"; };
@@ -194,6 +204,15 @@
 			path = Spot;
 			sourceTree = "<group>";
 		};
+		73C065152BD90BA000E635B2 /* SpotsARView */ = {
+			isa = PBXGroup;
+			children = (
+				73C065162BD90BC000E635B2 /* SpotsARView.swift */,
+				73C065182BD90BE200E635B2 /* Spots.rcproject */,
+			);
+			path = SpotsARView;
+			sourceTree = "<group>";
+		};
 		A13344132BD8924A00A01D18 = {
 			isa = PBXGroup;
 			children = (
@@ -217,10 +236,14 @@
 		A133441E2BD8924A00A01D18 /* oxxopared */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 				73C065042BD8F58700E635B2 /* Spot1.rcproject */,
 				73019AA72BD8D1FD00B812C9 /* ARview.swift */,
 =======
+=======
+				73C065152BD90BA000E635B2 /* SpotsARView */,
+>>>>>>> Stashed changes
 				06CAFF4F2BD8C9890014679A /* Feed */,
 				A17A00012BD8C45300FBC66D /* AuthAndOnboarding */,
 >>>>>>> main
@@ -411,6 +434,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A17A000F2BD8C45300FBC66D /* CustomInputField.swift in Sources */,
+				73C065172BD90BC000E635B2 /* SpotsARView.swift in Sources */,
+				73C065192BD90BE200E635B2 /* Spots.rcproject in Sources */,
 				736EF5442BD8A93A00724E61 /* HexagonParameters.swift in Sources */,
 				06CAFF532BD8CA2E0014679A /* SpotView.swift in Sources */,
 				9B88833D2BD8E4EB002C89E2 /* MainTabBarContainerView.swift in Sources */,
@@ -611,7 +636,11 @@
 				DEVELOPMENT_TEAM = SAM2A296M4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+<<<<<<< Updated upstream
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires permission to use camera";
+=======
+				INFOPLIST_KEY_NSCameraUsageDescription = "Esta app necesita la cámara";
+>>>>>>> Stashed changes
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -641,7 +670,11 @@
 				DEVELOPMENT_TEAM = SAM2A296M4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+<<<<<<< Updated upstream
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires permission to use camera";
+=======
+				INFOPLIST_KEY_NSCameraUsageDescription = "Esta app necesita la cámara";
+>>>>>>> Stashed changes
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
