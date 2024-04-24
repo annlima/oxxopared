@@ -64,8 +64,8 @@ struct TabBarView1: View {
         
         var body: some View {
             Button {
-                withAnimation {
-                    selectedTab = tab
+                withAnimation(.spring(response: 0.3, dampingFraction: 0.6)) {
+                        selectedTab = tab
                 }
             } label: {
                 ZStack {
