@@ -696,7 +696,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"oxxopared/Preview Content\"";
-				DEVELOPMENT_TEAM = KS6DBFHYN6;
+				DEVELOPMENT_TEAM = SAM2A296M4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = oxxopared/Info.plist;
@@ -711,7 +711,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Andy.oxxopared.-";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Andy.oxxopared.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -727,7 +727,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"oxxopared/Preview Content\"";
-				DEVELOPMENT_TEAM = KS6DBFHYN6;
+				DEVELOPMENT_TEAM = SAM2A296M4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = oxxopared/Info.plist;
@@ -742,7 +742,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Andy.oxxopared.-";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Andy.oxxopared.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
