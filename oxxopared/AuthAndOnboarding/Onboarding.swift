@@ -15,7 +15,8 @@ struct Onboarding: View {
 
     var body: some View {
         if onboardingCompleted{
-            
+            MainFeedView()
+                .environmentObject(SpotStore())
         }
         else
         {
