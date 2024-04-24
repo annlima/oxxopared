@@ -13,6 +13,7 @@ struct Profile {
     let profilePhoto: Image
     let spinPremia: Int
     let spots: [Spot]?
+    let badges: [Int]
 }
 
 
@@ -21,11 +22,12 @@ extension Profile {
     static var fer: Profile {
         Profile(
             name: "Fernando Ahuatzin",
-            profilePhoto: Image(.michi),
+            profilePhoto: Image(.fer),
             spinPremia: 1111111,
             spots: [
                 Spot.spot1
-            ]
+            ],
+            badges: [0]
         )
     }
 }

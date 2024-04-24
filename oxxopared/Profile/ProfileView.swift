@@ -3,117 +3,70 @@ import MapKit
 
 struct ProfileView: View {
     
-    /*let profile: Profile = .andy
+    let profile: Profile = .fer
     @State var text: String = ""
-    @State private var isSelectedPosts = true
-    @State private var isSelectedComplaint = false
     @State private var alertText = ""
     @State private var showingBadge = false
     
     @State private var myPlace: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 19.04802, longitude: -98.29617) // Default value
-    @State private var currentTab: Int = ProfileTabs.statistics.rawValue
     @State private var showMenu = false // For showing the action sheet
     @State private var navigateToSettings = false // To control navigation to the settings view
     @State private var navigateToLogIn = false // To control navigation to the login view
     @State private var badgeEarned = false
-    */
+    
     var body: some View {
-        
-        Text("hola")
-        /*
-        
                           
         NavigationStack {
             ScrollView {
                 ZStack(alignment: .topTrailing) {
                     
-                    profile.backgroundPhoto
-                        .resizable()
-                        .frame(height: 170)
+                    
+                    
+                    VStack{
+                        
+                        // Profile Information
+                        VStack (alignment: .center, spacing: 10) {
+                            
+                            // Profile picture
+                            profile.profilePhoto
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 150, height: 150)
+                                .clipShape(.circle)
+                                .overlay(
+                                        Circle()
+                                            .stroke(.white, lineWidth: 4)
+                                    )
+                                .padding(4)
+                                .background {
+                                    Circle()
+                                        .strokeBorder(.white, lineWidth: 4)
+                                        .background(Circle().foregroundColor(.white))
+                                        .frame(width: 150, height: 150)
+                                        .shadow(radius: 20) // Adds a shadow for depth
+                                }
+                                
+                                .padding(.top, 70)
+                            
+                            Text(profile.name)
+                                .font(.title)
+                                .bold()
+                                .foregroundColor(.white)
+                                .padding(.bottom, 20)
+                            
+                            
+                        }
                         .ignoresSafeArea()
-                    
-                    
-                    Menu {
-                        Button {
-                            self.navigateToSettings = true
-                        } label: {
-                            Text("Configuración")
-                        }
-                        
-                        Button{
-                            self.navigateToLogIn = true
-                        } label: {
-                            Text("Cerrar sesión")
-                            
-                        }
-                    } label: {
-                        Image(systemName: "ellipsis")
-                            .imageScale(.large)
-                            .rotationEffect(Angle(degrees: 90))
-                            .foregroundColor(.colorPrincipal) // Use your principal color here
-                    }
-                    .frame(width: 40, height: 40)
-                    .background{
-                        Color.white
-                            .opacity(0.7)
-                    }
-                    .cornerRadius(30)
-                    .shadow(radius: 10)
-                    .padding(.top, 50)
-                    .padding(.trailing, 15)
-                    
-                    VStack (alignment: .center, spacing: 10) {
-                        
-                        // Profile picture
-                        profile.profilePhoto
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 150, height: 150)
-                            .clipShape(.circle)
-                            .padding(4)
-                            .background {
-                                Circle()
-                                    .strokeBorder(Color.gray, lineWidth: 4) // Adds a border to the profile picture
-                                    .background(Circle().foregroundColor(.white))
-                                    .frame(width: 150, height: 150)
-                                    .shadow(radius: 10) // Adds a shadow for depth
-                            }
-                            .padding(.top, 70)
-                        
-                        // Profile Information and Follow/Message Buttons
-                        Text(profile.name) // Replace with actual username
-                            .font(.title)
-                            .bold()
-                        
-                        Text(profile.headline)
-                            .multilineTextAlignment(.center)
-                        
-                        Text(profile.location)
-                            .font(.subheadline)
-                            .foregroundStyle(.secondary)
-                            .padding()
-                        
-                        NavigationLink(destination: MyPlaceView(myPlace: $myPlace)) {
-                            HStack {
-                                Image(systemName: "house")
-                                Text("Mi casa")
-                            }
-                            
-                            EmptyView()
-                            
-                        }
-                        .padding(.bottom)
-                        .buttonStyle(CustomeButtonStyle())
-                        .shadow(color: .gray, radius: 5, x: 0, y: 2)
-                        .foregroundColor(Color("ColorPrincipal"))
+                        .frame(maxWidth: .infinity)
+                        .background(Color.redMain)
                         
                         
+                        Spacer()
                         
                         VStack(alignment: .leading, spacing: 20) {
                             
-                            Divider()
                             
-                            Text("Mis Insignias")
+                            Text("Mis insignias")
                                 .font(.system(.title2, weight: .bold))
                                 .frame(maxWidth: .infinity, alignment: .leading)
                             
@@ -150,38 +103,69 @@ struct ProfileView: View {
                             
                             Divider()
                             
-                            
-                            Text("Mis Contribuciones")
+                            Text("Mis anuncios")
                                 .font(.system(.title2, weight: .bold))
                                 .frame(maxWidth: .infinity, alignment: .leading)
                             
-                            ForEach(profile.complaints ?? [Complaint.none]) { complaint in
+                            /*/ForEach(profile.spots ?? [Spot.none]) { spot in
                                 
                                 VStack {
-                                    ComplaintsLeaderView(complaint: complaint)
+                                    //ComplaintsLeaderView(spot: spot)
+                                    
                                     Divider()
                                 }
                                 
-                            }
+                            }*/
+                            
                         }
+                        .padding()
                         
                         Spacer()
-                        
                     }
-                    .padding()
+                    
+                    Menu {
+                        Button {
+                            self.navigateToSettings = true
+                        } label: {
+                            Text("Configuración")
+                        }
+                        
+                        Button{
+                            self.navigateToLogIn = true
+                        } label: {
+                            Text("Cerrar sesión")
+                            
+                        }
+                    } label: {
+                        Image(systemName: "ellipsis")
+                            .imageScale(.large)
+                            .rotationEffect(Angle(degrees: 90))
+                            .foregroundColor(.black)
+                    }
+                    .frame(width: 40, height: 40)
+                    .background{
+                        Color.white
+                            .opacity(0.9)
+                    }
+                    .cornerRadius(30)
+                    .shadow(radius: 10)
+                    .padding(.top, 50)
+                    .padding(.trailing, 15)
+                    
                 }
+                //.padding()
             }
             .ignoresSafeArea()
             .navigationDestination(isPresented: $navigateToSettings) {
-                SettingsView()
+                //SettingsView()
             }
             .navigationDestination(isPresented: $navigateToLogIn) {
-                LoginView()
+                //LoginView()
             }
-            .ignoresSafeArea()
+            
         }
         .navigationBarHidden(true)
-                          */
+        .ignoresSafeArea()
     }
 }
 
