@@ -30,6 +30,7 @@ struct AnimatedImageView: View {
 
             Spacer()
             NavigationLink(destination: Onboarding(), isActive: $shouldNavigate) { EmptyView() }
+
             Button(action: {
                 self.shouldNavigate = true
                 print("Botón continuar presionado.")
