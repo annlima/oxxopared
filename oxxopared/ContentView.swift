@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     @EnvironmentObject private var authModel: AuthViewModel
+    @Environment(\.presentations) private var presentations
     
     
     var body: some View {
