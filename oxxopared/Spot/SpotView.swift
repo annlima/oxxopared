@@ -50,7 +50,7 @@ struct SpotView: View {
         
         .padding()
         .alert(isPresented: $reported) {
-            Alert(title: Text("Reported"), message: Text("You have already reported this post. We will take it into account."), dismissButton: .default(Text("OK")))
+            Alert(title: Text("Reportado"), message: Text("Has reportado este post, muchas gracias por contribuir."), dismissButton: .default(Text("Entendido")))
         }
         .overlay(
        TapeView()
