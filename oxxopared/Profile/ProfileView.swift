@@ -25,7 +25,7 @@ struct ProfileView: View {
     @State private var navigateToLogIn = false // To control navigation to the login view
     @State private var badgeEarned = false
     @State private var isActive = false
-    
+    @State private var goToStart = false
     var body: some View {
                           
         NavigationStack {
@@ -134,9 +134,13 @@ struct ProfileView: View {
                                                     EmptyView()
                                                 }
 
-                                Button("Open QR Reader") {
+                                Button() {
                                     isActive = true
+                                } label: {
+                                    Image(systemName: "plus")
+                                        .padding()
                                 }
+                                .foregroundStyle(.black)
                             }
                             
                             
@@ -192,6 +196,7 @@ struct ProfileView: View {
             }
             
         }
+        
         .navigationBarHidden(true)
         .ignoresSafeArea()
     }

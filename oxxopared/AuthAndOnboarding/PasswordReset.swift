@@ -20,7 +20,7 @@ struct PasswordResetView: View {
             
             VStack(spacing: 40) {
                 CustomInputField(imageName: "envelope",
-                                 placeholderText: "correo",
+                                 placeholderText: "Ingrese correo electrónico",
                                  isSecureField: false,
                                  text: $email)
             }
