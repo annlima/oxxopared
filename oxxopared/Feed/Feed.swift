@@ -34,7 +34,7 @@ struct Feed: View {
             
             
             ScrollView() {
-                ForEach(spots) { spot in
+                ForEach(spots.reversed()) { spot in
                     SpotView(spot: spot)
                         .padding()
                 }
