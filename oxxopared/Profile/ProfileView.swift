@@ -6,6 +6,8 @@ import FirebaseFirestore
 
 struct ProfileView: View {
     
+    @EnvironmentObject private var authModel: AuthViewModel
+    
     @State private var myProfile: User?
     @AppStorage("user_name") var nombreCompleto: String = ""
     @AppStorage("user_UID") var userUID: String = ""
@@ -163,7 +165,7 @@ struct ProfileView: View {
                         }
                         
                         Button{
-                            self.navigateToLogIn = true
+                            logoutUser()
                         } label: {
                             Text("Cerrar sesión")
                             
