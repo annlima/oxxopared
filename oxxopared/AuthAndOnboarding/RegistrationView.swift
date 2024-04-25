@@ -67,7 +67,7 @@ struct RegistrationView: View {
                 }
                 .padding(.horizontal, 30)
                 .padding(.top, -40)
-                NavigationLink(destination: Onboarding(), isActive: $shouldNavigate) { EmptyView() }
+                NavigationLink(destination: AnimatedImageView(), isActive: $shouldNavigate) { EmptyView() }
                 Button {
                     register()
                     //self.shouldNavigate = true
