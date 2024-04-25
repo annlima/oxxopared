@@ -8,6 +8,7 @@ import SwiftUI
 
 struct AnimatedImageView: View {
     @State private var showImage = false
+    @State private var shouldNavigate = false
 
     var body: some View {
         VStack {
@@ -28,9 +29,11 @@ struct AnimatedImageView: View {
                 }
 
             Spacer()
-            Button(action: {
-                // Acción para el botón "Continuar"
-                print("Botón continuar presionado.")
+            NavigationLink(destination: Onboarding(), isActive: $shouldNavigate) { EmptyView() }
+                        Button(action: {
+                            // Acción para el botón "Continuar"
+                            self.shouldNavigate = true
+                            print("Botón continuar presionado.")
             }) {
                 Text("Continuar")
                     .bold()
@@ -44,6 +47,7 @@ struct AnimatedImageView: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .ignoresSafeArea()
+        .navigationBarHidden(true)
     }
 }
 

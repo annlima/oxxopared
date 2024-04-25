@@ -29,14 +29,15 @@ struct Onboarding: View {
                     ProfilePhotoTab(selectedIndex: $selectedIndex).tag(1)
                     NotificationsTab(selectedIndex: $selectedIndex).tag(2)
                     LocationPermissionTab().tag(3)
-                    GoTab(onboardingCompleted: $onboardingCompleted).tag(4)
+                    ReportingTab(selectedIndex: $selectedIndex).tag(4)
+                    GoTab(onboardingCompleted: $onboardingCompleted).tag(5)
                 }
                 .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
                 
                 VStack {
                     Spacer()
                     HStack(spacing: 8) {
-                        ForEach(0..<5) { index in
+                        ForEach(0..<6) { index in
                             Rectangle()
                                 .frame(width: selectedIndex == index ? 20 : 8, height: 8)
                                 .foregroundColor(selectedIndex == index ? Color.white : Color.gray)
@@ -213,6 +214,37 @@ struct NotificationsTab: View {
                 showingAlert = true
                 selectedIndex = (selectedIndex) % 6
             }
+        }
+    }
+}
+
+// MARK: - Report posts
+struct ReportingTab: View {
+    @Binding var selectedIndex: Int
+    @State private var showingImagePicker = false
+    @State private var inputImage: UIImage?
+
+    var body: some View {
+        VStack {
+            Spacer()
+            Image(systemName: "exclamationmark.bubble")
+                .font(.system(size: 190, weight: .bold))
+                .foregroundColor(.white)
+                .padding(.bottom, -20)
+            Text("Reportar publicaciones")
+                .font(.system(size: 48, weight: .bold))
+                .foregroundColor(.white)
+                .padding([.horizontal], 10)
+                .padding(.top, 20)
+                .padding(.bottom, 1)
+                .multilineTextAlignment(.center)
+            Text("En caso de que veas una publicación que no cumple con las políticas de nuestra app y el código de ética, repórtala.")
+                .font(.system(size: 20))
+                .foregroundColor(.white)
+                .bold()
+                .multilineTextAlignment(.center)
+                .padding([.trailing, .leading, .bottom], 50)
+            Spacer()
         }
     }
 }
