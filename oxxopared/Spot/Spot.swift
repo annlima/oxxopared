@@ -8,13 +8,14 @@
 import Foundation
 import SwiftUI
 
-struct Spot : Identifiable {
+struct Spot: Identifiable {
     let id = UUID()
     var title: String
     var image: Image?
     var text: String
-    var category: String // oportunidades, servicios, artículos de segunda mano, cosas perdidas, medio ambiente
+    var category: String
 }
+
 
 extension Spot{
     
