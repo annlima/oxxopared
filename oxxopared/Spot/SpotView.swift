@@ -47,15 +47,16 @@ struct SpotView: View {
             }
             .offset(x: 110, y: -30) // Adjust the offset as needed
         }
-        .overlay(
-                   TapeView()
-                       .rotationEffect(.degrees(-1)),
-                       alignment: .top
-                   )
+        
         .padding()
         .alert(isPresented: $reported) {
             Alert(title: Text("Reported"), message: Text("You have already reported this post. We will take it into account."), dismissButton: .default(Text("OK")))
         }
+        .overlay(
+       TapeView()
+           .rotationEffect(.degrees(-1)),
+           alignment: .top
+       )
     }
 
     private func reportSpot() {
