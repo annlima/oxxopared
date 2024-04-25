@@ -34,6 +34,8 @@
 		73F339962BD98C6C0097281E /* ReusableSpotsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F339952BD98C6C0097281E /* ReusableSpotsView.swift */; };
 		73F3399D2BD9C0BC0097281E /* Spots.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 73F3399C2BD9C0BC0097281E /* Spots.rcproject */; };
 		73F3399F2BD9C2D60097281E /* AuthViewModelswift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F3399E2BD9C2D60097281E /* AuthViewModelswift.swift */; };
+		73F339A12BD9CE390097281E /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 73F339A02BD9CE390097281E /* SDWebImageSwiftUI */; };
+		73F339A32BD9CE4B0097281E /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 73F339A22BD9CE4B0097281E /* FirebaseAnalytics */; };
 		9B88833B2BD8E476002C89E2 /* MainTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B88833A2BD8E476002C89E2 /* MainTabBarItem.swift */; };
 		9B88833D2BD8E4EB002C89E2 /* MainTabBarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B88833C2BD8E4EB002C89E2 /* MainTabBarContainerView.swift */; };
 		9B88833F2BD8E50C002C89E2 /* MainTabBarItemsPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B88833E2BD8E50C002C89E2 /* MainTabBarItemsPreferenceKey.swift */; };
@@ -168,6 +170,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73F339A32BD9CE4B0097281E /* FirebaseAnalytics in Frameworks */,
+				73F339A12BD9CE390097281E /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,6 +405,10 @@
 				A133442E2BD8924C00A01D18 /* PBXTargetDependency */,
 			);
 			name = oxxoparedTests;
+			packageProductDependencies = (
+				73F339A02BD9CE390097281E /* SDWebImageSwiftUI */,
+				73F339A22BD9CE4B0097281E /* FirebaseAnalytics */,
+			);
 			productName = oxxoparedTests;
 			productReference = A133442C2BD8924C00A01D18 /* oxxoparedTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -712,7 +720,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"oxxopared/Preview Content\"";
-				DEVELOPMENT_TEAM = KS6DBFHYN6;
+				DEVELOPMENT_TEAM = SAM2A296M4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = oxxopared/Info.plist;
@@ -727,7 +735,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Andy.oxxopared.1.;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Andy.oxxopared.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -743,7 +751,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"oxxopared/Preview Content\"";
-				DEVELOPMENT_TEAM = KS6DBFHYN6;
+				DEVELOPMENT_TEAM = SAM2A296M4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = oxxopared/Info.plist;
@@ -758,7 +766,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Andy.oxxopared.1.;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Andy.oxxopared.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -907,6 +915,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 73F339922BD98BC70097281E /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
 			productName = SDWebImageSwiftUI;
+		};
+		73F339A02BD9CE390097281E /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 73F339922BD98BC70097281E /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+		73F339A22BD9CE4B0097281E /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A11CA75C2BD9648400A5AFD1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
 		};
 		A11CA75D2BD9648400A5AFD1 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;

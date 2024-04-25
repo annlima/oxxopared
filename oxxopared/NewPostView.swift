@@ -34,7 +34,10 @@ struct NewPostView: View {
     @State private var selectedCategory = "Oportunidades"
     let modelURL = Bundle.main.url(forResource: "IllegalRelated", withExtension: "mlmodelc")!
     @State var validImage = false;
-    
+    @State var errorMessage: String = ""
+    @State var showError: Bool = false
+    @State var alertMessage: String = ""
+    @State var showingAlert = false
     @State private var navigationActive = false
 
     var screenWidth: CGFloat {
@@ -142,14 +145,18 @@ struct NewPostView: View {
                                         let newImage: Image?
                                         if let selectedImage = selectedImage {
                                             newImage = Image(uiImage: selectedImage)
+                                            navigationActive = spotStore.addSpot(title: titleText, image: newImage, text: caption, category: selectedCategory)
                                         } else {
-                                            newImage = nil  // Keep newImage as nil if there's no selected image
+                                            //newImage = nil  // Keep newImage as nil if there's no selected image
+                                            
+                                            navigationActive = spotStore.addSpot2(title: titleText, text: caption, category: selectedCategory)
                                         }
-                                        navigationActive = spotStore.addSpot(title: titleText, image: newImage, text: caption, category: selectedCategory)
                                     }
                                     else
                                     {
-                                        print("not legal")
+                                        showingAlert = true
+                                        alertMessage = "La imagen que intentas publicar no es permitida."
+                                        
                                     }
                                 } catch {
                                     print("Error al hacer la predicción: \(error)")
@@ -160,11 +167,10 @@ struct NewPostView: View {
                            
                         } else {
                             // Provide user feedback about the error
-                            print("Error: No image selected")
+                            //print("Error: No image selected")
+                            
+                            navigationActive = spotStore.addSpot2(title: titleText, text: caption, category: selectedCategory)
                         }
-                        
-                        
-                        
                         
                     }
                     .padding(.vertical, 12)
@@ -173,13 +179,18 @@ struct NewPostView: View {
                     .foregroundColor(.white)
                     .background(Color.redMain)
                     .cornerRadius(10)
-                    
+                    .disabled(titleText.isEmpty || caption.isEmpty || selectedCategory.isEmpty)
 
                 }
             }
+            
             .padding()
         }
+        .alert(isPresented: $showingAlert) {
+            Alert(title: Text("Error"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
+        }
     }
+    
 
     func pixelBufferConv(from image: UIImage) -> CVPixelBuffer? {
         let size = image.size
@@ -229,6 +240,12 @@ struct NewPostView: View {
     }
 
 
+    func setError(_ error: Error) async {
+        await MainActor.run(body:{
+            errorMessage = error.localizedDescription
+            showError.toggle()
+        })
+    }
 
 }
 

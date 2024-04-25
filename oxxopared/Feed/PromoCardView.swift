@@ -58,6 +58,11 @@ struct PromosView: View {
         Promo(title: "Detergente Azálea", detail: "https://www.oxxo.com/promociones/hogar", imageName: "promo2")
     ]
     @Binding var navigationPath: NavigationPath
+    
+    @Environment(\.presentationMode) var presentationMode
+    @Environment(\.presentations) private var presentations
+    
+    
     var body: some View {
         NavigationStack{
             VStack {
@@ -77,20 +82,28 @@ struct PromosView: View {
 
                 if promos.allSatisfy({ $0.isRevealed }) {
                     Button("Continuar") {
-                        navigationPath.removeLast(3)
+                        //navigationPath.removeLast(3)
+                        //presentationMode.wrappedValue.dismiss()
+                        presentations.forEach {
+                                        $0.wrappedValue = false
+                                    }
                     }
-                    .padding(.top, 20)
                     .bold()
                     .foregroundColor(.white)
                     .padding()
                     .background(Color("RedMain"))
                     .cornerRadius(8)
+                    .padding(.top, 20)
                 }
+                
                 Spacer()
             }
+            .padding()
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .edgesIgnoringSafeArea(.all)
         }
+        .navigationBarBackButtonHidden(true)
+        .ignoresSafeArea()
         
     }
     
